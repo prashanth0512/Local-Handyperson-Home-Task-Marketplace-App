@@ -1,0 +1,2043 @@
+
+.homera-contact-main {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg, #F8FAFC);
+  color: var(--color-text, #0F172A);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+.homera-contact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8A6414;
+  background-color: rgba(212, 175, 55, 0.16);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+[data-theme="dark"] .homera-contact-eyebrow {
+  color: #F3DC85;
+  background-color: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.32);
+}
+
+.homera-contact-eyebrow__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--brand-gold, #D4AF37);
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.85);
+}
+
+.homera-contact-hero {
+  position: relative;
+  width: 100%;
+  min-height: clamp(580px, 68vh, 680px);
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at 12% 25%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+              linear-gradient(135deg, #FFFDF9 0%, #FAF5EE 52%, #F4ECE0 100%);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .homera-contact-hero {
+  background: radial-gradient(circle at 18% 28%, rgba(30, 42, 120, 0.3) 0%, transparent 60%),
+              radial-gradient(circle at 45% 85%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+              #0B1120;
+  border-bottom-color: #273449;
+}
+
+.homera-contact-hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-max, 1280px);
+  margin-inline: auto;
+  padding-block: clamp(52px, 6.5vw, 84px);
+}
+
+.homera-contact-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .homera-contact-hero__content {
+    max-width: min(600px, 48vw);
+  }
+}
+
+[dir="rtl"] .homera-contact-hero__content {
+  align-items: flex-start;
+  text-align: start;
+}
+
+.homera-contact-hero__title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(28px, 3.2vw, 46px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text-strong, #0F172A);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+[data-theme="dark"] .homera-contact-hero__title {
+  color: #F8FAFC;
+}
+
+.homera-contact-hero__title-accent {
+  display: block;
+  color: var(--brand-gold, #D4AF37);
+  font-family: inherit;
+  font-style: normal;
+}
+
+.homera-contact-hero__gold-line {
+  width: 54px;
+  height: 3.5px;
+  background: var(--brand-gold, #D4AF37);
+  border-radius: 2px;
+  margin: 4px 0 22px 0;
+}
+
+[dir="rtl"] .homera-contact-hero__gold-line {
+  background: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-hero__desc {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: clamp(15px, 1.15vw, 16.5px);
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 0 28px 0;
+}
+
+[data-theme="dark"] .homera-contact-hero__desc {
+  color: #CBD5E1;
+}
+
+.homera-contact-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.homera-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: all var(--dur-base, 200ms) var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1));
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.homera-contact-btn__icon {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-fast, 150ms) ease;
+}
+
+.homera-contact-btn:hover .homera-contact-btn__icon {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .homera-contact-btn:hover .homera-contact-btn__icon {
+  transform: translateX(-4px) scaleX(-1);
+}
+
+.homera-contact-btn__phone-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.homera-contact-btn--primary {
+  background: var(--color-primary, #1E2A78);
+  color: #FFFFFF;
+  border: 1.5px solid var(--color-primary, #1E2A78);
+}
+
+.homera-contact-btn--primary:hover {
+  background: var(--brand-gold, #D4AF37);
+  border-color: var(--brand-gold, #D4AF37);
+  color: var(--brand-navy, #0F172A);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
+}
+
+[data-theme="dark"] .homera-contact-btn--primary {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+  border-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+}
+
+[data-theme="dark"] .homera-contact-btn--primary:hover {
+  background-color: var(--brand-gold-hover, #E3C45D);
+  border-color: var(--brand-gold-hover, #E3C45D);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.homera-contact-btn--secondary {
+  background: #FFFFFF;
+  color: var(--color-text-strong, #0F172A);
+  border: 1.5px solid #CBD5E1;
+}
+
+.homera-contact-btn--secondary:hover {
+  border-color: var(--color-primary, #1E2A78);
+  color: var(--color-primary, #1E2A78);
+  background: #F8FAFC;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] .homera-contact-btn--secondary {
+  background: #111C32;
+  color: #F8FAFC;
+  border-color: #273449;
+}
+
+[data-theme="dark"] .homera-contact-btn--secondary:hover {
+  background-color: #1A2742;
+  border-color: var(--brand-gold, #D4AF37);
+  color: var(--brand-gold, #D4AF37);
+  transform: translateY(-2px);
+}
+
+.homera-contact-hero__stats {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(16px, 2.2vw, 24px);
+  padding: 14px 24px;
+  background: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: 14px;
+  box-shadow: 0 10px 28px -6px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.03);
+  width: fit-content;
+  max-width: 100%;
+}
+
+[data-theme="dark"] .homera-contact-hero__stats {
+  background: #111C32;
+  border-color: #273449;
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.55);
+}
+
+.homera-contact-hero__stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.homera-contact-hero__stat-num {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--brand-gold, #D4AF37);
+  letter-spacing: -0.01em;
+}
+
+[data-theme="dark"] .homera-contact-hero__stat-num {
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-hero__stat-label {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted, #64748B);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .homera-contact-hero__stat-label {
+  color: #94A3B8;
+}
+
+.homera-contact-hero__stat-divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--color-border, #E2E8F0);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .homera-contact-hero__stat-divider {
+  background-color: #273449;
+}
+
+.homera-contact-hero__visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 52%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+[dir="rtl"] .homera-contact-hero__visual {
+  right: auto;
+  left: 0;
+}
+
+.homera-contact-hero__frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
+  will-change: clip-path;
+}
+
+[dir="rtl"] .homera-contact-hero__frame {
+  clip-path: polygon(0 0, 84% 0, 100% 100%, 0 100%);
+}
+
+.homera-contact-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.homera-contact-hero:hover .homera-contact-hero__image {
+  transform: scale(1.03);
+}
+
+.homera-contact-hero__slant-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.homera-contact-hero__slant-line-stroke {
+  stroke: var(--brand-gold, #D4AF37);
+  stroke-width: 3.5px;
+  vector-effect: non-scaling-stroke;
+}
+
+[dir="rtl"] .homera-contact-hero__slant-line {
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+.homera-contact-hero__badge {
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+  z-index: 4;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 14px 28px -8px rgba(15, 23, 42, 0.18);
+  max-width: calc(100% - 40px);
+}
+
+[dir="rtl"] .homera-contact-hero__badge {
+  right: auto;
+  left: 32px;
+}
+
+[data-theme="dark"] .homera-contact-hero__badge {
+  background: rgba(17, 28, 50, 0.92);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.6);
+}
+
+.homera-contact-hero__badge-pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  flex-shrink: 0;
+  animation: pulseLiveGreen 2s infinite ease-in-out;
+}
+
+@keyframes pulseLiveGreen {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.homera-contact-hero__badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-contact-hero__badge-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+  letter-spacing: -0.01em;
+}
+
+[data-theme="dark"] .homera-contact-hero__badge-label {
+  color: #F8FAFC;
+}
+
+.homera-contact-hero__badge-sub {
+  font-size: 11.5px;
+  color: var(--color-text-muted, #64748B);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .homera-contact-hero__badge-sub {
+  color: #94A3B8;
+}
+
+@media (max-width: 991.98px) {
+  .homera-contact-hero {
+    flex-direction: column;
+    min-height: auto;
+    padding-block: 48px 40px;
+    gap: 36px;
+  }
+
+  .homera-contact-hero__inner {
+    padding-block: 0;
+  }
+
+  .homera-contact-hero__content {
+    max-width: 100%;
+  }
+
+  .homera-contact-hero__stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .homera-contact-hero__visual {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    padding-inline: var(--page-gutter, 20px);
+    max-width: var(--container-max, 1280px);
+    margin-inline: auto;
+  }
+
+  .homera-contact-hero__frame {
+    clip-path: none;
+    border-radius: var(--radius-xl, 20px);
+    box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.2);
+    border: 1px solid var(--color-border, #E2E8F0);
+  }
+
+  .homera-contact-hero__slant-line {
+    display: none;
+  }
+
+  .homera-contact-hero__badge {
+    bottom: 16px;
+    right: 36px;
+  }
+
+  [dir="rtl"] .homera-contact-hero__badge {
+    right: auto;
+    left: 36px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .homera-contact-hero__stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  .homera-contact-hero__stat-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .homera-contact-hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .homera-contact-btn {
+    width: 100%;
+  }
+
+  .homera-contact-hero__visual {
+    height: 280px;
+  }
+}
+
+.homera-contact-hub {
+  padding-block: clamp(54px, 7vw, 96px);
+  position: relative;
+}
+
+.homera-contact-hub__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(28px, 4vw, 48px);
+  align-items: start;
+}
+
+.homera-contact-form-card {
+  position: relative;
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-xl, 24px);
+  padding: clamp(28px, 3.8vw, 44px);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.07);
+  overflow: hidden;
+}
+
+.homera-contact-form-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.9) 50%, rgba(212, 175, 55, 0.1) 100%);
+}
+
+[data-theme="dark"] .homera-contact-form-card {
+  background-color: #111C32;
+  border-color: #273449;
+  box-shadow: 0 18px 40px -8px rgba(0, 0, 0, 0.55);
+}
+
+.homera-contact-form-card__header {
+  margin-bottom: 26px;
+}
+
+.homera-contact-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-indigo, #1E2A78);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill, 999px);
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .homera-contact-card-badge {
+  color: var(--brand-gold, #D4AF37);
+  background-color: rgba(212, 175, 55, 0.14);
+}
+
+.homera-contact-card-badge__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-form-card__title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(26px, 2.5vw, 34px);
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--color-text-strong, #0F172A);
+  margin: 0 0 8px 0;
+}
+
+[data-theme="dark"] .homera-contact-form-card__title {
+  color: #F8FAFC;
+}
+
+.homera-contact-form-card__desc {
+  font-size: 14px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.6;
+  margin: 0;
+}
+
+[data-theme="dark"] .homera-contact-form-card__desc {
+  color: #CBD5E1;
+}
+
+.homera-contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.homera-contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.homera-contact-field--full {
+  margin-bottom: 18px;
+}
+
+.homera-contact-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+}
+
+[data-theme="dark"] .homera-contact-label {
+  color: #E2E8F0;
+}
+
+.homera-contact-label .required {
+  color: #EF4444;
+}
+
+.homera-contact-input-wrap,
+.homera-contact-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.homera-contact-input-icon {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 14px;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  stroke: #94A3B8;
+  stroke-width: 2;
+  fill: none;
+  pointer-events: none;
+  transition: stroke 0.2s ease;
+}
+
+.homera-contact-input,
+.homera-contact-select,
+.homera-contact-textarea {
+  width: 100%;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--color-border, #CBD5E1);
+  background-color: var(--color-bg, #F8FAFC);
+  color: var(--color-text-strong, #0F172A);
+  font-family: inherit;
+  font-size: 13.5px;
+  box-sizing: border-box;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+[data-theme="dark"] .homera-contact-input,
+[data-theme="dark"] .homera-contact-select,
+[data-theme="dark"] .homera-contact-textarea {
+  background-color: #0F172A;
+  border-color: #273449;
+  color: #F8FAFC;
+}
+
+.homera-contact-input {
+  height: 44px;
+  padding-inline-start: 42px;
+  padding-inline-end: 14px;
+}
+
+.homera-contact-select {
+  height: 44px;
+  padding-inline-start: 14px;
+  padding-inline-end: 38px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.homera-contact-select-arrow {
+  position: absolute;
+  top: 50%;
+  inset-inline-end: 14px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  stroke: #64748B;
+  stroke-width: 2.2;
+  fill: none;
+  pointer-events: none;
+}
+
+.homera-contact-textarea {
+  padding: 12px 14px;
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+.homera-contact-input:focus,
+.homera-contact-select:focus,
+.homera-contact-textarea:focus {
+  outline: none;
+  border-color: var(--brand-indigo, #1E2A78);
+  box-shadow: 0 0 0 3px rgba(30, 42, 120, 0.14);
+  background-color: #FFFFFF;
+}
+
+[data-theme="dark"] .homera-contact-input:focus,
+[data-theme="dark"] .homera-contact-select:focus,
+[data-theme="dark"] .homera-contact-textarea:focus {
+  border-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+  background-color: #111C32;
+}
+
+.homera-contact-input-wrap:focus-within .homera-contact-input-icon {
+  stroke: var(--brand-indigo, #1E2A78);
+}
+
+[data-theme="dark"] .homera-contact-input-wrap:focus-within .homera-contact-input-icon {
+  stroke: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-field.has-error .homera-contact-input,
+.homera-contact-field.has-error .homera-contact-select,
+.homera-contact-field.has-error .homera-contact-textarea {
+  border-color: #EF4444 !important;
+  background-color: rgba(239, 68, 68, 0.03);
+}
+
+.homera-contact-error {
+  display: none;
+  font-size: 11.5px;
+  color: #EF4444;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.homera-contact-field.has-error .homera-contact-error {
+  display: block;
+}
+
+.homera-contact-checkbox-wrap {
+  margin-bottom: 22px;
+}
+
+.homera-contact-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.homera-contact-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.homera-contact-checkbox-custom {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 1.5px solid var(--color-border-strong, #CBD5E1);
+  background-color: var(--color-bg, #F8FAFC);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.15s ease;
+}
+
+[data-theme="dark"] .homera-contact-checkbox-custom {
+  background-color: #0F172A;
+  border-color: #273449;
+}
+
+.homera-contact-checkbox:checked + .homera-contact-checkbox-custom {
+  background-color: var(--brand-indigo, #1E2A78);
+  border-color: var(--brand-indigo, #1E2A78);
+}
+
+[data-theme="dark"] .homera-contact-checkbox:checked + .homera-contact-checkbox-custom {
+  background-color: var(--brand-gold, #D4AF37);
+  border-color: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-checkbox:checked + .homera-contact-checkbox-custom::after {
+  content: "";
+  width: 5px;
+  height: 9px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+[data-theme="dark"] .homera-contact-checkbox:checked + .homera-contact-checkbox-custom::after {
+  border-color: #0F172A;
+}
+
+.homera-contact-checkbox-text {
+  font-size: 12.5px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.5;
+}
+
+.homera-contact-checkbox-text a {
+  color: var(--brand-indigo, #1E2A78);
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .homera-contact-checkbox-text a {
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.homera-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: var(--radius-md, 12px);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.homera-contact-btn--gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #C39D2C 100%);
+  color: #0F172A;
+  border-color: #D4AF37;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+}
+
+.homera-contact-btn--gold:hover {
+  background: linear-gradient(135deg, #E3C45D 0%, #D4AF37 100%);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+  transform: translateY(-1px);
+}
+
+.homera-contact-btn .btn-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+  transition: transform 0.15s ease;
+}
+
+.homera-contact-btn:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .homera-contact-btn:hover .btn-icon {
+  transform: translateX(-4px);
+}
+
+.btn-spinner {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(15, 23, 42, 0.25);
+  border-top-color: #0F172A;
+  border-radius: 50%;
+  animation: contactSpin 0.7s infinite linear;
+}
+
+@keyframes contactSpin {
+  to { transform: rotate(360deg); }
+}
+
+.homera-contact-btn.is-submitting .btn-text,
+.homera-contact-btn.is-submitting .btn-icon {
+  display: none;
+}
+
+.homera-contact-btn.is-submitting .btn-spinner {
+  display: inline-block;
+}
+
+.homera-contact-form__guarantee {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--color-text-muted, #64748B);
+}
+
+.homera-contact-form__guarantee svg {
+  width: 14px;
+  height: 14px;
+  stroke: #D4AF37;
+  stroke-width: 2;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.homera-contact-feedback {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md, 12px);
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: contactFade 0.25s ease-out;
+}
+
+@keyframes contactFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.homera-contact-feedback--success {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #065F46;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+[data-theme="dark"] .homera-contact-feedback--success {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #6EE7B7;
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.homera-contact-feedback--error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #991B1B;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+[data-theme="dark"] .homera-contact-feedback--error {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #FCA5A5;
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.homera-contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.homera-contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.homera-contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-xl, 20px);
+  padding: 20px 22px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme="dark"] .homera-contact-card {
+  background-color: #111C32;
+  border-color: #273449;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.homera-contact-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 10px 26px -6px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] .homera-contact-card:hover {
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.6);
+}
+
+.homera-contact-card__icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(30, 42, 120, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-indigo, #1E2A78);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .homera-contact-card__icon-wrap {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-card__icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.homera-contact-card__body {
+  flex: 1 1 auto;
+}
+
+.homera-contact-card__tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-gold, #D4AF37);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.homera-contact-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+[data-theme="dark"] .homera-contact-card__title {
+  color: #F8FAFC;
+}
+
+.homera-contact-card__text {
+  font-size: 13.5px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+  font-style: normal;
+}
+
+[data-theme="dark"] .homera-contact-card__text {
+  color: #CBD5E1;
+}
+
+.homera-contact-card__link {
+  color: var(--brand-indigo, #1E2A78);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .homera-contact-card__link {
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.homera-contact-card__meta-item {
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+.homera-contact-card__meta-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill, 999px);
+  background-color: var(--color-bg, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  color: #64748B;
+}
+
+[data-theme="dark"] .homera-contact-card__meta-badge {
+  background-color: #0F172A;
+  border-color: #273449;
+  color: #CBD5E1;
+}
+
+.homera-contact-card__meta-badge--live {
+  background-color: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #059669;
+}
+
+[data-theme="dark"] .homera-contact-card__meta-badge--live {
+  background-color: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #34D399;
+}
+
+.homera-contact-map-card {
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-xl, 20px);
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="dark"] .homera-contact-map-card {
+  background-color: #111C32;
+  border-color: #273449;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.homera-contact-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+  background-color: var(--color-surface, #FFFFFF);
+}
+
+[data-theme="dark"] .homera-contact-map-header {
+  background-color: #111C32;
+  border-bottom-color: #273449;
+}
+
+.homera-contact-map-header__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-contact-map-header__title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+}
+
+[data-theme="dark"] .homera-contact-map-header__title {
+  color: #F8FAFC;
+}
+
+.homera-contact-map-header__coords {
+  font-size: 11px;
+  color: var(--color-text-muted, #64748B);
+}
+
+.homera-contact-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand-indigo, #1E2A78);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm, 8px);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  border: 1px solid rgba(30, 42, 120, 0.15);
+  transition: all 0.15s ease;
+}
+
+[data-theme="dark"] .homera-contact-map-btn {
+  color: var(--brand-gold, #D4AF37);
+  background-color: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.homera-contact-map-btn:hover {
+  background-color: var(--brand-indigo, #1E2A78);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .homera-contact-map-btn:hover {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+}
+
+.homera-contact-map-btn svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+}
+
+.homera-contact-map-frame {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-color: #0F172A;
+}
+
+.homera-contact-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  filter: contrast(1.05) saturate(0.9);
+}
+
+[data-theme="dark"] .homera-contact-map-iframe {
+  filter: invert(90%) hue-rotate(180deg) contrast(1.1) brightness(0.95);
+}
+
+.homera-contact-map-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+[dir="rtl"] .homera-contact-map-overlay {
+  left: auto;
+  right: 12px;
+}
+
+.homera-contact-map-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 12px;
+  padding: 8px 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.homera-contact-map-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 0 10px var(--brand-gold, #D4AF37);
+  flex-shrink: 0;
+}
+
+.homera-contact-map-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.homera-contact-map-badge-text strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.homera-contact-map-badge-text span {
+  font-size: 10px;
+  color: #CBD5E1;
+}
+
+.homera-contact-faqs {
+  padding-block: clamp(54px, 7vw, 92px);
+  background-color: var(--color-surface, #FFFFFF);
+  border-top: 1px solid var(--color-border, #E2E8F0);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-contact-faqs {
+  background-color: #0F172A;
+  border-top-color: #1E293B;
+  border-bottom-color: #1E293B;
+}
+
+.homera-contact-faqs__inner {
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.homera-contact-faqs__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: clamp(36px, 5vw, 54px);
+}
+
+.homera-contact-faqs__title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-strong, #0F172A);
+  letter-spacing: normal;
+  margin: 0 0 20px 0;
+}
+
+[data-theme="dark"] .homera-contact-faqs__title {
+  color: #F8FAFC;
+}
+
+.homera-contact-faqs__title-accent {
+  color: var(--brand-gold, #D4AF37);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.homera-contact-faqs__gold-line {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, #D4AF37 0%, rgba(212, 175, 55, 0.1) 100%);
+  border-radius: 2px;
+  margin: 0 auto 16px auto;
+}
+
+[dir="rtl"] .homera-contact-faqs__gold-line {
+  background: linear-gradient(-90deg, #D4AF37 0%, rgba(212, 175, 55, 0.1) 100%);
+}
+
+.homera-contact-faqs__desc {
+  font-size: clamp(14.5px, 1.1vw, 16.5px);
+  color: var(--color-text-muted, #64748B);
+  max-width: 640px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+[data-theme="dark"] .homera-contact-faqs__desc {
+  color: #CBD5E1;
+}
+
+.homera-contact-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background-color: var(--color-bg, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 16px);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .faq-item {
+  background-color: #111C32;
+  border-color: #273449;
+}
+
+.faq-item.is-open {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 8px 24px -6px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] .faq-item.is-open {
+  border-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 10px 28px -6px rgba(0, 0, 0, 0.5);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: transparent;
+  border: 0;
+  text-align: start;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.15s ease;
+}
+
+.faq-trigger:hover {
+  background-color: rgba(30, 42, 120, 0.02);
+}
+
+[data-theme="dark"] .faq-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.faq-trigger__question {
+  font-size: clamp(15.5px, 1.2vw, 17.5px);
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+  line-height: 1.35;
+  transition: color 0.15s ease;
+}
+
+[data-theme="dark"] .faq-trigger__question {
+  color: #F8FAFC;
+}
+
+.faq-item.is-open .faq-trigger__question {
+  color: var(--brand-indigo, #1E2A78);
+}
+
+[data-theme="dark"] .faq-item.is-open .faq-trigger__question {
+  color: var(--brand-gold, #D4AF37);
+}
+
+.faq-trigger__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-indigo, #1E2A78);
+  flex-shrink: 0;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-theme="dark"] .faq-trigger__icon {
+  background-color: #1A2742;
+  border-color: #273449;
+  color: var(--brand-gold, #D4AF37);
+}
+
+.faq-trigger__icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+  transition: transform 0.25s ease;
+}
+
+.faq-item.is-open .faq-trigger__icon {
+  background-color: var(--brand-indigo, #1E2A78);
+  color: #FFFFFF;
+  transform: rotate(180deg);
+}
+
+[data-theme="dark"] .faq-item.is-open .faq-trigger__icon {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+}
+
+.faq-content {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.faq-content[hidden] {
+  display: none;
+}
+
+.faq-content__inner {
+  padding: 0 24px 22px 24px;
+  font-size: 14.5px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.68;
+}
+
+[data-theme="dark"] .faq-content__inner {
+  color: #CBD5E1;
+}
+
+.faq-content__inner p {
+  margin: 0;
+}
+
+.faq-content__inner p strong {
+  color: var(--color-text-strong, #0F172A);
+}
+
+[data-theme="dark"] .faq-content__inner p strong {
+  color: #F8FAFC;
+}
+
+.faq-content__inner a {
+  color: var(--brand-indigo, #1E2A78);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .faq-content__inner a {
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-contact-cta {
+  position: relative;
+  background-color: var(--color-bg, #F8FAFC);
+  padding-block: clamp(48px, 6vw, 76px);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .homera-contact-cta {
+  background-color: #0B1120;
+}
+
+.homera-contact-cta__card {
+  position: relative;
+
+  background: radial-gradient(circle at 10% 28%, rgba(59, 130, 246, 0.22) 0%, transparent 48%),
+              radial-gradient(circle at 92% 75%, rgba(212, 175, 55, 0.14) 0%, transparent 45%),
+              #121A46;
+  border-radius: var(--radius-xl, 24px);
+  padding: clamp(28px, 3.4vw, 42px) clamp(22px, 3.4vw, 44px);
+  overflow: hidden;
+  box-shadow: 0 28px 60px -15px rgba(15, 23, 42, 0.4),
+              0 0 0 1px rgba(212, 175, 55, 0.3);
+  isolation: isolate;
+}
+
+.homera-contact-cta__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.9) 50%, rgba(212, 175, 55, 0.1) 100%);
+  z-index: 5;
+}
+
+.homera-contact-cta__card::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.16) 0%, rgba(212, 175, 55, 0.08) 50%, transparent 70%);
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+[dir="rtl"] .homera-contact-cta__card::after {
+  left: auto;
+  right: -40px;
+}
+
+[data-theme="dark"] .homera-contact-cta__card {
+  background: radial-gradient(circle at 10% 28%, rgba(59, 130, 246, 0.2) 0%, transparent 48%),
+              radial-gradient(circle at 92% 75%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+              #0B1120;
+  box-shadow: 0 28px 60px -15px rgba(0, 0, 0, 0.8),
+              0 0 0 1px #273449;
+}
+
+.homera-contact-cta__layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: clamp(28px, 3.6vw, 52px);
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.homera-contact-cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.homera-contact-cta__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #F8D675;
+  background-color: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill, 999px);
+  margin-bottom: 14px;
+}
+
+.homera-contact-cta__badge-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.2);
+}
+
+.homera-contact-cta__badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #D4AF37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.9);
+}
+
+.homera-contact-cta__title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.18;
+  color: #FFFFFF;
+  letter-spacing: normal;
+  margin: 0 0 18px 0;
+  text-align: start;
+}
+
+.homera-contact-cta__title-accent {
+  color: #E3C45D;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.homera-contact-cta__gold-line {
+  margin: 12px 0 16px 0;
+  background: linear-gradient(90deg, #D4AF37, rgba(212, 175, 55, 0.1));
+  width: 52px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+[dir="rtl"] .homera-contact-cta__gold-line {
+  background: linear-gradient(-90deg, #D4AF37, rgba(212, 175, 55, 0.1));
+}
+
+.homera-contact-cta__text {
+  font-size: clamp(14px, 1.05vw, 15.5px);
+  color: #CBD5E1;
+  max-width: 480px;
+  line-height: 1.62;
+  margin: 0 0 18px 0;
+  text-align: start;
+}
+
+.homera-contact-cta__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.homera-contact-cta__trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #F1F5F9;
+  font-size: 11.5px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 200ms ease;
+}
+
+.homera-contact-cta__trust-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.homera-contact-cta__trust-icon {
+  width: 13px;
+  height: 13px;
+  stroke: #D4AF37;
+  stroke-width: 2.2;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.homera-contact-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.homera-contact-btn--outline-light {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.homera-contact-btn--outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #FFFFFF;
+}
+
+.homera-contact-cta__disclaimer {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: rgba(203, 213, 225, 0.75);
+  letter-spacing: 0.015em;
+  margin: 0;
+  text-align: start;
+}
+
+.homera-contact-cta__disclaimer-icon {
+  width: 12px;
+  height: 12px;
+  stroke: #D4AF37;
+  stroke-width: 2;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.homera-contact-cta__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.homera-contact-cta__image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  aspect-ratio: 16 / 11.5;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  box-shadow: 0 20px 42px -10px rgba(0, 0, 0, 0.55),
+              0 0 28px rgba(212, 175, 55, 0.12);
+  isolation: isolate;
+  background-color: #0F172A;
+}
+
+.homera-contact-cta__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 600ms ease;
+}
+
+.homera-contact-cta__card:hover .homera-contact-cta__image {
+  transform: scale(1.04);
+  filter: brightness(1.02);
+}
+
+.homera-contact-cta__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.55) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.homera-contact-cta__float-pill {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 999px;
+  padding: 5px 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  z-index: 3;
+}
+
+[dir="rtl"] .homera-contact-cta__float-pill {
+  right: auto;
+  left: 12px;
+}
+
+.homera-contact-cta__float-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  flex-shrink: 0;
+}
+
+.homera-contact-cta__float-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.homera-contact-cta__float-text strong {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #F8FAFC;
+}
+
+.homera-contact-cta__float-text span {
+  font-size: 9px;
+  color: #F8D675;
+  letter-spacing: 0.03em;
+}
+
+.homera-contact-cta__float-card {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  border-radius: 12px;
+  padding: 8px 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  z-index: 3;
+}
+
+[dir="rtl"] .homera-contact-cta__float-card {
+  left: auto;
+  right: 12px;
+}
+
+.homera-contact-cta__float-icon-wrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4AF37;
+  flex-shrink: 0;
+}
+
+.homera-contact-cta__float-icon {
+  width: 14px;
+  height: 14px;
+  fill: #D4AF37;
+  stroke: #D4AF37;
+}
+
+.homera-contact-cta__float-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.homera-contact-cta__float-rating {
+  font-size: 12px;
+  font-weight: 800;
+  color: #F8FAFC;
+  letter-spacing: -0.01em;
+}
+
+.homera-contact-cta__float-sub {
+  font-size: 10px;
+  color: #CBD5E1;
+}
+
+.homera-contact-cta__ambient-glow {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(59, 130, 246, 0.14) 45%, transparent 70%);
+  filter: blur(38px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .homera-contact-hub__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .homera-contact-info-col {
+    max-width: 680px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .homera-contact-cta__layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .homera-contact-cta__visual {
+    max-width: 440px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .homera-contact-hero {
+    padding-block: 40px 32px;
+  }
+
+  .homera-contact-hero__stats {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .homera-contact-hero__stat-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .homera-contact-form-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .homera-contact-form__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .homera-contact-form__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .homera-contact-btn {
+    width: 100%;
+  }
+
+  .homera-contact-form__guarantee {
+    justify-content: center;
+  }
+
+  .homera-contact-card {
+    padding: 16px 18px;
+    border-radius: 16px;
+  }
+
+  .homera-contact-map-frame {
+    height: 200px;
+  }
+
+  .faq-trigger {
+    padding: 16px 18px;
+  }
+
+  .faq-content__inner {
+    padding: 0 18px 18px 18px;
+  }
+
+  .homera-contact-cta {
+    padding-block: 40px;
+  }
+
+  .homera-contact-cta__card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .homera-contact-cta__title {
+    font-size: clamp(24px, 5.5vw, 30px);
+  }
+
+  .homera-contact-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .homera-contact-cta__trust-row {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .homera-contact-cta__trust-pill {
+    font-size: 11px;
+    padding: 4px 9px;
+  }
+
+  .homera-contact-cta__float-card {
+    padding: 6px 10px;
+    bottom: 8px;
+    left: 8px;
+  }
+
+  .homera-contact-cta__float-pill {
+    padding: 4px 8px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homera-contact-btn,
+  .homera-contact-card,
+  .faq-content,
+  .faq-trigger__icon,
+  .homera-contact-cta__image {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

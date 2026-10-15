@@ -1,0 +1,1153 @@
+.services-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    color: var(--color-primary-ink);
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+.services-hero-eyebrow-line {
+    display: inline-block;
+    width: 34px;
+    height: 2px;
+    flex-shrink: 0;
+    background: var(--color-accent);
+}
+
+.homera-services-main {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg, #F8FAFC);
+  color: var(--color-text, #0F172A);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+.homera-services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--brand-indigo, #1E2A78);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill, 999px);
+
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+[data-theme="dark"] .homera-services-eyebrow {
+  color: var(--brand-gold, #D4AF37);
+  background-color: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.homera-services-eyebrow__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--brand-gold, #D4AF37);
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.homera-services-section-title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-strong, #0F172A);
+  letter-spacing: normal;
+  margin: 0 0 20px 0;
+}
+
+.homera-services-section-title span {
+  color: var(--color-primary-ink, var(--brand-indigo, #1E2A78));
+}
+
+[data-theme="dark"] .homera-services-section-title {
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .homera-services-section-title span {
+  color: var(--color-accent, #D4AF37);
+}
+
+.homera-services-section-sub {
+  font-size: clamp(15px, 1.2vw, 17px);
+  color: var(--color-text-muted, #64748B);
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+.homera-services-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: var(--radius-sm);
+  transition: all var(--dur-base, 200ms) var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1));
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.homera-services-btn__icon {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-fast, 150ms) ease;
+}
+
+.homera-services-btn:hover .homera-services-btn__icon {
+  transform: translateX(4px);
+}
+
+html[dir="rtl"] .homera-services-btn:hover .homera-services-btn__icon {
+  transform: translateX(-4px);
+}
+
+.homera-services-btn--primary {
+ border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+.homera-services-btn--primary:hover {
+ border-color: var(--brand-gold);
+    background: var(--brand-gold);
+    color: var(--brand-navy);
+}
+
+[data-theme="dark"] .homera-services-btn--primary {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+  border-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+}
+
+[data-theme="dark"] .homera-services-btn--primary:hover {
+  background-color: var(--brand-gold-hover, #E3C45D);
+  border-color: var(--brand-gold-hover, #E3C45D);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+}
+
+.homera-services-btn--secondary {
+  border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+}
+
+.homera-services-btn--secondary:hover {
+  border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+[data-theme="dark"] .homera-services-btn--secondary {
+  color: #F8FAFC;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .homera-services-btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--brand-gold, #D4AF37);
+}
+
+.homera-services-btn--gold {
+ border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    background: var(--color-primary);
+    color: var(--color-primary-text);;
+}
+
+.homera-services-btn--gold:hover {
+   border-color: var(--brand-gold);
+    background: var(--brand-gold);
+    color: var(--brand-navy);
+}
+
+.homera-services-btn--outline-light {
+  border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+}
+
+.homera-services-btn--outline-light:hover {
+  border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+.homera-services-hero {
+  position: relative;
+  padding-block: clamp(48px, 6vw, 92px) clamp(56px, 7vw, 100px);
+  background: radial-gradient(circle at 10% 20%, rgba(30, 42, 120, 0.04) 0%, transparent 60%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 50%),
+              var(--color-bg, #F8FAFC);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .homera-services-hero {
+  background: radial-gradient(circle at 10% 20%, rgba(30, 42, 120, 0.22) 0%, transparent 60%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+              #0B1120;
+  border-bottom-color: #273449;
+}
+
+.homera-services-hero__inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  align-items: center;
+  gap: clamp(36px, 5vw, 68px);
+}
+
+.homera-services-hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-services-hero .homera-services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: var(--brand-indigo, #1E2A78);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+[data-theme="dark"] .homera-services-hero .homera-services-eyebrow {
+  color: var(--brand-gold-hover, #E3C45D);
+  background: transparent;
+  border: none;
+}
+
+.services-hero-eyebrow-line {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--brand-gold, #D4AF37);
+}
+
+.homera-services-hero__title {
+  max-width: 760px;
+  margin: 0 0 20px 0;
+  color: var(--color-text-strong, #0F172A);
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.homera-services-hero__title span {
+  display: block;
+  color: var(--color-primary-ink, var(--brand-indigo, #1E2A78));
+}
+
+[data-theme="dark"] .homera-services-hero__title {
+  color: var(--brand-white, #F8FAFC);
+}
+
+[data-theme="dark"] .homera-services-hero__title span {
+  color: var(--brand-gold-hover, #E3C45D);
+}
+
+.homera-services-hero__lead {
+  max-width: 600px;
+  margin: 0 0 32px 0;
+  color: var(--color-text-muted, #64748B);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+[data-theme="dark"] .homera-services-hero__lead {
+  color: rgba(248, 250, 252, 0.9);
+}
+
+.homera-services-hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 38px;
+}
+
+.homera-services-hero__trust {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(16px, 3vw, 32px);
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-services-hero__trust {
+  border-top-color: #273449;
+}
+
+.homera-services-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-muted, #64748B);
+}
+
+[data-theme="dark"] .homera-services-trust-item {
+  color: #CBD5E1;
+}
+
+.homera-services-trust-item__icon {
+  width: 17px;
+  height: 17px;
+  stroke: var(--brand-gold, #D4AF37);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.homera-services-hero__visual {
+  position: relative;
+}
+
+.homera-services-hero__media-frame {
+  position: relative;
+  border-radius: var(--radius-xl, 20px);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -15px rgba(15, 23, 42, 0.22),
+              0 0 0 1px rgba(212, 175, 55, 0.25);
+  background-color: var(--color-surface, #FFFFFF);
+  aspect-ratio: 16 / 12;
+}
+
+[data-theme="dark"] .homera-services-hero__media-frame {
+  box-shadow: 0 26px 64px -15px rgba(0, 0, 0, 0.7),
+              0 0 0 1px rgba(212, 175, 55, 0.3);
+}
+
+.homera-services-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1));
+}
+
+.homera-services-hero__media-frame:hover .homera-services-hero__image {
+  transform: scale(1.03);
+}
+
+.homera-services-hero__badge {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  background-color: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+html[dir="rtl"] .homera-services-hero__badge {
+  left: auto;
+  right: 22px;
+}
+
+.homera-services-hero__badge-accent {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-services-hero__badge-text {
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.homera-services-cards {
+  padding-block: clamp(64px, 8vw, 112px);
+  background-color: var(--color-bg, #F8FAFC);
+}
+
+[data-theme="dark"] .homera-services-cards {
+  background-color: #0B1120;
+}
+
+.homera-services-cards__header {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: clamp(40px, 5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homera-services-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 2.8vw, 36px);
+}
+
+.homera-services-card {
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-xl, 20px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--dur-base, 200ms) var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1)),
+              box-shadow var(--dur-base, 200ms) var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1)),
+              border-color var(--dur-base, 200ms) ease;
+  box-shadow: 0 4px 20px -6px rgba(15, 23, 42, 0.06);
+}
+
+[data-theme="dark"] .homera-services-card {
+  background-color: #111C32;
+  border-color: #273449;
+  box-shadow: 0 6px 24px -6px rgba(0, 0, 0, 0.4);
+}
+
+.homera-services-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px -12px rgba(30, 42, 120, 0.14),
+              0 0 0 1px rgba(212, 175, 55, 0.35);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+[data-theme="dark"] .homera-services-card:hover {
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.65),
+              0 0 0 1px rgba(212, 175, 55, 0.5);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.homera-services-card__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: #0F172A;
+}
+
+.homera-services-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1));
+}
+
+.homera-services-card:hover .homera-services-card__img {
+  transform: scale(1.05);
+}
+
+.homera-services-card__category {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--brand-gold, #D4AF37);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+html[dir="rtl"] .homera-services-card__category {
+  left: auto;
+  right: 14px;
+}
+
+.homera-services-card__body {
+  padding: clamp(20px, 2.4vw, 28px);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.homera-services-card__icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md, 12px);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  color: var(--brand-indigo, #1E2A78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(30, 42, 120, 0.1);
+  transition: all var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-services-card__icon-wrap {
+  background-color: #1A2742;
+  color: var(--brand-gold, #D4AF37);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.homera-services-card:hover .homera-services-card__icon-wrap {
+  background-color: var(--brand-indigo, #1E2A78);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .homera-services-card:hover .homera-services-card__icon-wrap {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+}
+
+.homera-services-card__icon {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.homera-services-card__title {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text-strong, #0F172A);
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] .homera-services-card__title {
+  color: #F8FAFC;
+}
+
+.homera-services-card__desc {
+  font-size: 14.5px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.homera-services-card__meta {
+  padding-block: 12px;
+  border-top: 1px dashed var(--color-border, #E2E8F0);
+  margin-bottom: 18px;
+}
+
+[data-theme="dark"] .homera-services-card__meta {
+  border-top-color: #273449;
+}
+
+.homera-services-card__scope {
+  font-size: 12.5px;
+  color: var(--color-text-muted, #64748B);
+  font-weight: 500;
+  display: block;
+}
+
+[data-theme="dark"] .homera-services-card__scope {
+  color: #CBD5E1;
+}
+
+.homera-services-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.homera-services-card__btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-indigo, #1E2A78);
+  transition: color var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-services-card__btn-view {
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-services-card__btn-view:hover {
+  color: var(--brand-blue, #3B82F6);
+}
+
+[data-theme="dark"] .homera-services-card__btn-view:hover {
+  color: var(--brand-gold-hover, #E3C45D);
+}
+
+.homera-services-card__arrow {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-fast, 150ms) ease;
+}
+
+.homera-services-card__btn-view:hover .homera-services-card__arrow {
+  transform: translateX(4px);
+}
+
+html[dir="rtl"] .homera-services-card__btn-view:hover .homera-services-card__arrow {
+  transform: translateX(-4px);
+}
+
+.homera-services-card__btn-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-radius: var(--radius-sm, 10px);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  color: var(--brand-indigo, #1E2A78);
+  border: 1px solid rgba(30, 42, 120, 0.15);
+  transition: all var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-services-card__btn-book {
+  background-color: #1A2742;
+  color: #F8FAFC;
+  border-color: #273449;
+}
+
+.homera-services-card__btn-book:hover {
+  background-color: var(--brand-indigo, #1E2A78);
+  color: #FFFFFF;
+  border-color: var(--brand-indigo, #1E2A78);
+}
+
+[data-theme="dark"] .homera-services-card__btn-book:hover {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+  border-color: var(--brand-gold, #D4AF37);
+}
+
+.homera-services-why {
+  padding-block: clamp(64px, 8vw, 112px);
+  background-color: var(--color-surface, #FFFFFF);
+  border-top: 1px solid var(--color-border, #E2E8F0);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-services-why {
+  background-color: #0F192D;
+  border-top-color: #273449;
+  border-bottom-color: #273449;
+}
+
+.homera-services-why__inner {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 76px);
+}
+
+.homera-services-why__visual {
+  position: relative;
+}
+
+.homera-services-why__media-card {
+  position: relative;
+  border-radius: var(--radius-xl, 20px);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -15px rgba(15, 23, 42, 0.16);
+  border: 1px solid var(--color-border, #E2E8F0);
+  aspect-ratio: 4 / 4.6;
+}
+
+[data-theme="dark"] .homera-services-why__media-card {
+  border-color: #273449;
+  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.6);
+}
+
+.homera-services-why__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.homera-services-why__quote-pill {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg, 14px);
+  padding: 18px 22px;
+  color: #FFFFFF;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.homera-services-why__quote-text {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.45;
+  margin-bottom: 6px;
+  color: #F8FAFC;
+}
+
+.homera-services-why__quote-author {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-services-why__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-services-why__header {
+  margin-bottom: 36px;
+}
+
+.homera-services-why__features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.homera-services-why__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 16px 20px;
+  border-radius: var(--radius-lg, 14px);
+  background-color: var(--color-bg, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  transition: transform var(--dur-fast, 150ms) ease,
+              border-color var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-services-why__feature {
+  background-color: #111C32;
+  border-color: #273449;
+}
+
+.homera-services-why__feature:hover {
+  transform: translateX(4px);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+html[dir="rtl"] .homera-services-why__feature:hover {
+  transform: translateX(-4px);
+}
+
+.homera-services-why__feature-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md, 12px);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  color: var(--brand-indigo, #1E2A78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(30, 42, 120, 0.12);
+}
+
+[data-theme="dark"] .homera-services-why__feature-icon-wrap {
+  background-color: #1A2742;
+  color: var(--brand-gold, #D4AF37);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.homera-services-why__feature-icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.homera-services-why__feature-body {
+  flex: 1;
+}
+
+.homera-services-why__feature-title {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+  margin-bottom: 5px;
+}
+
+[data-theme="dark"] .homera-services-why__feature-title {
+  color: #F8FAFC;
+}
+
+.homera-services-why__feature-desc {
+  font-size: 14px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.55;
+}
+
+.homera-services-process {
+  padding-block: clamp(64px, 8vw, 112px);
+  background-color: var(--color-bg, #F8FAFC);
+}
+
+[data-theme="dark"] .homera-services-process {
+  background-color: #0B1120;
+}
+
+.homera-services-process__header {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: clamp(48px, 6vw, 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homera-services-process__timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2.2vw, 28px);
+  position: relative;
+}
+
+.homera-services-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-services-step__indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.homera-services-step__num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-surface, #FFFFFF);
+  border: 2px solid var(--brand-indigo, #1E2A78);
+  color: var(--brand-indigo, #1E2A78);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(30, 42, 120, 0.12);
+  transition: all var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-services-step__num {
+  background-color: #111C32;
+  border-color: var(--brand-gold, #D4AF37);
+  color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.homera-services-step:hover .homera-services-step__num {
+  background-color: var(--brand-indigo, #1E2A78);
+  color: #FFFFFF;
+  transform: scale(1.08);
+}
+
+[data-theme="dark"] .homera-services-step:hover .homera-services-step__num {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+}
+
+.homera-services-step__line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-indigo, #1E2A78), rgba(30, 42, 120, 0.15));
+  margin-left: 12px;
+}
+
+html[dir="rtl"] .homera-services-step__line {
+  margin-left: 0;
+  margin-right: 12px;
+  background: linear-gradient(270deg, var(--brand-indigo, #1E2A78), rgba(30, 42, 120, 0.15));
+}
+
+[data-theme="dark"] .homera-services-step__line {
+  background: linear-gradient(90deg, var(--brand-gold, #D4AF37), rgba(212, 175, 55, 0.15));
+}
+
+html[dir="rtl"] [data-theme="dark"] .homera-services-step__line {
+  background: linear-gradient(270deg, var(--brand-gold, #D4AF37), rgba(212, 175, 55, 0.15));
+}
+
+.homera-services-step__card {
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 14px);
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--dur-fast, 150ms) ease,
+              border-color var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-services-step__card {
+  background-color: #111C32;
+  border-color: #273449;
+}
+
+.homera-services-step:hover .homera-services-step__card {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.homera-services-step__title {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 17.5px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .homera-services-step__title {
+  color: #F8FAFC;
+}
+
+.homera-services-step__desc {
+  font-size: 14px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.55;
+}
+
+.homera-services-cta {
+  position: relative;
+
+  color: #FFFFFF;
+  padding-block: clamp(72px, 9vw, 120px);
+  overflow: hidden;
+}
+
+.homera-services-cta__backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: url("kitchen-upgrades.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: saturate(0.8);
+}
+
+.homera-services-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 42, 120, 0.64) 0%, rgba(15, 23, 42, 0.68) 100%);
+  z-index: 1;
+}
+
+.homera-services-cta__container {
+  position: relative;
+  z-index: 2;
+}
+
+.homera-services-cta__inner {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homera-services-cta__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--brand-gold, #D4AF37);
+
+  padding: 6px 16px;
+  border-radius: var(--radius-pill, 999px);
+
+  margin-bottom: 22px;
+}
+
+.homera-services-cta__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+}
+
+.homera-services-cta__title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.18;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+  letter-spacing: normal;
+}
+
+.homera-services-cta__title span {
+  color: #E3C45D;
+}
+
+.homera-services-cta__text {
+  font-size: clamp(16px, 1.3vw, 18.5px);
+  color: #CBD5E1;
+  line-height: 1.65;
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+
+.homera-services-cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .homera-services-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .homera-services-hero__visual {
+    max-width: 620px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .homera-services-cards__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .homera-services-why__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .homera-services-why__visual {
+    max-width: 540px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .homera-services-process__timeline {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+  }
+
+  .homera-services-step:nth-child(2) .homera-services-step__line {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .homera-services-cards__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .homera-services-process__timeline {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .homera-services-step__line {
+    display: none;
+  }
+
+  .homera-services-hero__actions,
+  .homera-services-cta__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .homera-services-btn {
+    width: 100%;
+  }
+
+  .homera-services-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .homera-services-card__btn-view {
+    justify-content: center;
+    padding-block: 6px;
+  }
+
+  .homera-services-why__feature {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

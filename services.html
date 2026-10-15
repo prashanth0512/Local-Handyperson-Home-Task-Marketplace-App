@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services — HOMERA Premium Home Services &amp; Expert Care</title>
+  <meta name="description" content="Explore HOMERA's luxury home services. Book trusted professionals for furniture assembly, minor repairs, wall mounting, small installations, plumbing fixes, and electrical fixtures.">
+  <meta name="theme-color" content="#F8FAFC">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <script src="navigation/component-loader.js?v=3"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+
+  <link rel="stylesheet" href="index.css?v=3">
+  <link rel="stylesheet" href="navigation/Header.css?v=3">
+  <link rel="stylesheet" href="navigation/Footer.css?v=3">
+  <link rel="stylesheet" href="services.css?v=3">
+
+  <script src="navigation/Header.js?v=3" defer></script>
+  <script src="navigation/Footer.js?v=3" defer></script>
+  <script src="services.js?v=3" defer></script>
+</head>
+<body>
+
+  <div class="component-mount" data-component="header" data-src="navigation/Header.html"></div>
+
+  <main id="main-content" class="page-main homera-services-main" tabindex="-1">
+
+    <section class="homera-services-hero" aria-labelledby="services-hero-title">
+      <div class="container homera-services-hero__inner">
+        <div class="homera-services-hero__content">
+          <span class="homera-services-eyebrow">
+            <span class="services-hero-eyebrow-line"></span>
+            HOMERA Curated Services
+            <span class="services-hero-eyebrow-line"></span>
+          </span>
+          <h1 class="homera-services-hero__title" id="services-hero-title">
+            Expert Care for Every
+            <span>Corner of Your Home.</span>
+          </h1>
+          <p class="homera-services-hero__lead">
+            From everyday repairs to thoughtful installations, HOMERA connects you with skilled professionals who make home maintenance feel effortless.
+          </p>
+          <div class="homera-services-hero__actions">
+            <a href="#services-grid" class="homera-services-btn homera-services-btn--primary">
+              <span>Book a Service</span>
+              <svg class="homera-services-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="pricing.html" class="homera-services-btn homera-services-btn--secondary">
+              <span>View Pricing &amp; Plans</span>
+            </a>
+          </div>
+
+          <div class="homera-services-hero__trust">
+            <div class="homera-services-trust-item">
+              <svg class="homera-services-trust-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span>Vetted Specialists</span>
+            </div>
+            <div class="homera-services-trust-item">
+              <svg class="homera-services-trust-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span>Transparent Scope</span>
+            </div>
+            <div class="homera-services-trust-item">
+              <svg class="homera-services-trust-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+              <span>Punctual Arrival</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="homera-services-hero__visual">
+          <div class="homera-services-hero__media-frame">
+            <img src="assets/images/services-hero.jpg" alt="Skilled home professional meticulously performing maintenance work" class="homera-services-hero__image" width="620" height="480" fetchpriority="high">
+            <div class="homera-services-hero__badge" role="status">
+              <span class="homera-services-hero__badge-accent">Hand-Selected</span>
+              <span class="homera-services-hero__badge-text">Dedicated Craftsmen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="homera-services-cards" id="services-grid" aria-labelledby="services-cards-heading">
+      <div class="container">
+        <header class="homera-services-cards__header">
+          <span class="homera-services-eyebrow">
+            <span class="services-hero-eyebrow-line"></span>
+            Specialized Disciplines
+            <span class="services-hero-eyebrow-line"></span>
+          </span>
+          <h2 class="homera-services-section-title" id="services-cards-heading">
+            Six Signature Home Services
+          </h2>
+          <p class="homera-services-section-sub">
+            Each discipline is delivered by vetted professionals equipped with specialized tools, hardware, and an unwavering commitment to craftsmanship.
+          </p>
+        </header>
+
+        <div class="homera-services-cards__grid">
+
+          <article class="homera-services-card" id="furniture-assembly">
+            <div class="homera-services-card__media">
+              <img src="assets/images/furniture-assembly.jpg" alt="Professional assembling high-end wooden bedroom furniture" class="homera-services-card__img" width="400" height="260" loading="lazy">
+              <span class="homera-services-card__category">Assembly &amp; Setup</span>
+            </div>
+            <div class="homera-services-card__body">
+              <div class="homera-services-card__icon-wrap" aria-hidden="true">
+                <svg class="homera-services-card__icon" viewBox="0 0 24 24">
+                  <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM4 11h16M12 11v8" />
+                </svg>
+              </div>
+              <h3 class="homera-services-card__title">Furniture Assembly</h3>
+              <p class="homera-services-card__desc">
+                Accurate flat-pack assembly for wardrobes, bed frames, desks, and shelving units according to exact manufacturer specifications.
+              </p>
+              <div class="homera-services-card__meta">
+                <span class="homera-services-card__scope">Precision alignment &bull; Clean packaging removal</span>
+              </div>
+              <div class="homera-services-card__actions">
+                <a href="services details.html?service=furniture-assembly" class="homera-services-card__btn-view">
+                  <span>View Service</span>
+                  <svg class="homera-services-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="services details.html?service=furniture-assembly#book" class="homera-services-card__btn-book">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="homera-services-card" id="minor-repairs">
+            <div class="homera-services-card__media">
+              <img src="assets/images/minor-repairs.jpg" alt="Craftsman adjusting cabinet door hinge and hardware" class="homera-services-card__img" width="400" height="260" loading="lazy">
+              <span class="homera-services-card__category">General Maintenance</span>
+            </div>
+            <div class="homera-services-card__body">
+              <div class="homera-services-card__icon-wrap" aria-hidden="true">
+                <svg class="homera-services-card__icon" viewBox="0 0 24 24">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </div>
+              <h3 class="homera-services-card__title">Minor Home Repairs</h3>
+              <p class="homera-services-card__desc">
+                Swift adjustments for sticky doors, loose hardware, cabinet hinges, minor drywall dings, and routine household wear.
+              </p>
+              <div class="homera-services-card__meta">
+                <span class="homera-services-card__scope">Hardware tune-up &bull; Multi-point home upkeep</span>
+              </div>
+              <div class="homera-services-card__actions">
+                <a href="services details.html?service=minor-repairs" class="homera-services-card__btn-view">
+                  <span>View Service</span>
+                  <svg class="homera-services-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="services details.html?service=minor-repairs#book" class="homera-services-card__btn-book">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="homera-services-card" id="wall-mounting">
+            <div class="homera-services-card__media">
+              <img src="assets/images/wall-mounting.jpg" alt="Professional using level to mount television securely on wall" class="homera-services-card__img" width="400" height="260" loading="lazy">
+              <span class="homera-services-card__category">Precision Mounting</span>
+            </div>
+            <div class="homera-services-card__body">
+              <div class="homera-services-card__icon-wrap" aria-hidden="true">
+                <svg class="homera-services-card__icon" viewBox="0 0 24 24">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+              <h3 class="homera-services-card__title">Wall Mounting</h3>
+              <p class="homera-services-card__desc">
+                Laser-level mounting for televisions, statement mirrors, heavy artwork galleries, and display shelves with substrate-rated anchors.
+              </p>
+              <div class="homera-services-card__meta">
+                <span class="homera-services-card__scope">Stud verification &bull; Concealed cabling options</span>
+              </div>
+              <div class="homera-services-card__actions">
+                <a href="services details.html?service=wall-mounting" class="homera-services-card__btn-view">
+                  <span>View Service</span>
+                  <svg class="homera-services-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="services details.html?service=wall-mounting#book" class="homera-services-card__btn-book">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="homera-services-card" id="installations" data-service-id="small-installations">
+            <div class="homera-services-card__media">
+              <img src="assets/images/small-installations.jpg" alt="Installation of drapery rod and custom window fittings" class="homera-services-card__img" width="400" height="260" loading="lazy">
+              <span class="homera-services-card__category">Fittings &amp; Fixtures</span>
+            </div>
+            <div class="homera-services-card__body">
+              <div class="homera-services-card__icon-wrap" aria-hidden="true">
+                <svg class="homera-services-card__icon" viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <path d="M12 4v16M2 12h20" />
+                </svg>
+              </div>
+              <h3 class="homera-services-card__title">Small Installations</h3>
+              <p class="homera-services-card__desc">
+                Flawless fitting of curtain poles, blinds, bathroom towel rails, child-safety gates, coat racks, and home accessories.
+              </p>
+              <div class="homera-services-card__meta">
+                <span class="homera-services-card__scope">Tile-safe drilling &bull; Symmetrical alignment</span>
+              </div>
+              <div class="homera-services-card__actions">
+                <a href="services details.html?service=small-installations" class="homera-services-card__btn-view">
+                  <span>View Service</span>
+                  <svg class="homera-services-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="services details.html?service=small-installations#book" class="homera-services-card__btn-book">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="homera-services-card" id="plumbing" data-service-id="plumbing-fixes">
+            <div class="homera-services-card__media">
+              <img src="assets/images/plumbing-fixes.jpg" alt="Plumbing specialist replacing faucet cartridge and O-ring seal" class="homera-services-card__img" width="400" height="260" loading="lazy">
+              <span class="homera-services-card__category">Flow &amp; Drainage</span>
+            </div>
+            <div class="homera-services-card__body">
+              <div class="homera-services-card__icon-wrap" aria-hidden="true">
+                <svg class="homera-services-card__icon" viewBox="0 0 24 24">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+              </div>
+              <h3 class="homera-services-card__title">Plumbing Fixes</h3>
+              <p class="homera-services-card__desc">
+                Targeted solutions for dripping taps, running toilet mechanisms, sluggish sink drains, showerhead upgrades, and minor seal wear.
+              </p>
+              <div class="homera-services-card__meta">
+                <span class="homera-services-card__scope">Leak diagnostics &bull; Pressure-tested integrity</span>
+              </div>
+              <div class="homera-services-card__actions">
+                <a href="services details.html?service=plumbing-fixes" class="homera-services-card__btn-view">
+                  <span>View Service</span>
+                  <svg class="homera-services-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="services details.html?service=plumbing-fixes#book" class="homera-services-card__btn-book">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="homera-services-card" id="electrical" data-service-id="electrical-fixes">
+            <div class="homera-services-card__media">
+              <img src="assets/images/electrical-fixtures.jpg" alt="Certified technician safely mounting modern designer light fixture" class="homera-services-card__img" width="400" height="260" loading="lazy">
+              <span class="homera-services-card__category">Certified Fixtures</span>
+            </div>
+            <div class="homera-services-card__body">
+              <div class="homera-services-card__icon-wrap" aria-hidden="true">
+                <svg class="homera-services-card__icon" viewBox="0 0 24 24">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <h3 class="homera-services-card__title">Electrical Fixes</h3>
+              <p class="homera-services-card__desc">
+                Safe, certified replacement of pendant lights, chandeliers, dimmer switches, and faceplates by qualified electrical specialists.
+              </p>
+              <div class="homera-services-card__meta">
+                <span class="homera-services-card__scope">Polarity testing &bull; Adheres to safety codes</span>
+              </div>
+              <div class="homera-services-card__actions">
+                <a href="services details.html?service=electrical-fixes" class="homera-services-card__btn-view">
+                  <span>View Service</span>
+                  <svg class="homera-services-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="services details.html?service=electrical-fixes#book" class="homera-services-card__btn-book">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="homera-services-why" aria-labelledby="services-why-title">
+      <div class="container homera-services-why__inner">
+        <div class="homera-services-why__visual">
+          <div class="homera-services-why__media-card">
+            <img src="assets/images/why-homera.jpg" alt="HOMERA technician carefully checking level and alignment" class="homera-services-why__img" width="560" height="580" loading="lazy">
+            <div class="homera-services-why__quote-pill">
+              <p class="homera-services-why__quote-text">
+                &ldquo;Every task is carried out with deliberate care, leaving your home elevated and calm.&rdquo;
+              </p>
+              <span class="homera-services-why__quote-author">— The HOMERA Craft Guild</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="homera-services-why__content">
+          <header class="homera-services-why__header">
+            <span class="homera-services-eyebrow">
+              <span class="services-hero-eyebrow-line"></span>
+              The HOMERA Standard
+              <span class="services-hero-eyebrow-line"></span>
+            </span>
+            <h2 class="homera-services-section-title" id="services-why-title">
+              Why Discerning Homeowners Choose HOMERA
+            </h2>
+            <p class="homera-services-section-sub">
+              We treat your living space with the discretion, precision, and craftsmanship it deserves.
+            </p>
+          </header>
+
+          <div class="homera-services-why__features">
+
+            <div class="homera-services-why__feature">
+              <div class="homera-services-why__feature-icon-wrap" aria-hidden="true">
+                <svg class="homera-services-why__feature-icon" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <div class="homera-services-why__feature-body">
+                <h3 class="homera-services-why__feature-title">Trusted Professionals</h3>
+                <p class="homera-services-why__feature-desc">
+                  Every specialist undergoes comprehensive credential validation, identity confirmation, and hands-on skill verification before serving clients.
+                </p>
+              </div>
+            </div>
+
+            <div class="homera-services-why__feature">
+              <div class="homera-services-why__feature-icon-wrap" aria-hidden="true">
+                <svg class="homera-services-why__feature-icon" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 6v2M12 16v2" />
+                </svg>
+              </div>
+              <div class="homera-services-why__feature-body">
+                <h3 class="homera-services-why__feature-title">Transparent Pricing</h3>
+                <p class="homera-services-why__feature-desc">
+                  Clear task scoping and transparent upfront estimates. No unexpected markups, hidden call-out fees, or ambiguous hourly estimates.
+                </p>
+              </div>
+            </div>
+
+            <div class="homera-services-why__feature">
+              <div class="homera-services-why__feature-icon-wrap" aria-hidden="true">
+                <svg class="homera-services-why__feature-icon" viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
+                </svg>
+              </div>
+              <div class="homera-services-why__feature-body">
+                <h3 class="homera-services-why__feature-title">Convenient Scheduling</h3>
+                <p class="homera-services-why__feature-desc">
+                  Reserve dedicated appointment windows that respect your personal calendar, complete with arrival notifications and dependable timeliness.
+                </p>
+              </div>
+            </div>
+
+            <div class="homera-services-why__feature">
+              <div class="homera-services-why__feature-icon-wrap" aria-hidden="true">
+                <svg class="homera-services-why__feature-icon" viewBox="0 0 24 24">
+                  <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <div class="homera-services-why__feature-body">
+                <h3 class="homera-services-why__feature-title">Quality-Focused Service</h3>
+                <p class="homera-services-why__feature-desc">
+                  Meticulous execution from initial protection of floor surfaces to laser-straight alignment, final testing, and spotless post-task clean-up.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="homera-services-process" aria-labelledby="services-process-title">
+      <div class="container">
+        <header class="homera-services-process__header">
+          <span class="homera-services-eyebrow">
+            <span class="services-hero-eyebrow-line"></span>
+            Effortless Journey
+            <span class="services-hero-eyebrow-line"></span>
+          </span>
+          <h2 class="homera-services-section-title" id="services-process-title">
+            Simple Booking Process
+          </h2>
+          <p class="homera-services-section-sub">
+            Four clear steps designed to deliver dependable, high-calibre home care with complete peace of mind.
+          </p>
+        </header>
+
+        <div class="homera-services-process__timeline">
+
+          <div class="homera-services-step">
+            <div class="homera-services-step__indicator">
+              <span class="homera-services-step__num">01</span>
+              <span class="homera-services-step__line" aria-hidden="true"></span>
+            </div>
+            <div class="homera-services-step__card">
+              <h3 class="homera-services-step__title">Choose Your Service</h3>
+              <p class="homera-services-step__desc">
+                Select from our six signature specialties or detail your custom household maintenance requirements.
+              </p>
+            </div>
+          </div>
+
+          <div class="homera-services-step">
+            <div class="homera-services-step__indicator">
+              <span class="homera-services-step__num">02</span>
+              <span class="homera-services-step__line" aria-hidden="true"></span>
+            </div>
+            <div class="homera-services-step__card">
+              <h3 class="homera-services-step__title">Select a Convenient Time</h3>
+              <p class="homera-services-step__desc">
+                Choose a preferred date and arrival window that aligns with your household schedule.
+              </p>
+            </div>
+          </div>
+
+          <div class="homera-services-step">
+            <div class="homera-services-step__indicator">
+              <span class="homera-services-step__num">03</span>
+              <span class="homera-services-step__line" aria-hidden="true"></span>
+            </div>
+            <div class="homera-services-step__card">
+              <h3 class="homera-services-step__title">Meet Your Professional</h3>
+              <p class="homera-services-step__desc">
+                A vetted, courteous specialist arrives on time, fully equipped with professional tools and fasteners.
+              </p>
+            </div>
+          </div>
+
+          <div class="homera-services-step">
+            <div class="homera-services-step__indicator">
+              <span class="homera-services-step__num">04</span>
+            </div>
+            <div class="homera-services-step__card">
+              <h3 class="homera-services-step__title">Enjoy a Job Well Done</h3>
+              <p class="homera-services-step__desc">
+                Inspect the completed craftsmanship, verify full functionality, and enjoy your pristine home.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 32px;">
+          <a href="how-it-works.html" class="homera-services-btn homera-services-btn--secondary" style="display: inline-flex;">
+            <span>Explore Complete Process Guide</span>
+            <svg class="homera-services-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width: 16px; height: 16px;">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="homera-services-cta" aria-labelledby="services-cta-heading">
+      <div class="homera-services-cta__backdrop" aria-hidden="true"></div>
+      <div class="container homera-services-cta__container">
+        <div class="homera-services-cta__inner">
+          <span class="homera-services-cta__badge">
+            <span class="services-hero-eyebrow-line"></span>
+            Seamless Home Care
+            <span class="services-hero-eyebrow-line"></span>
+          </span>
+          <h2 class="homera-services-cta__title" id="services-cta-heading">
+            Your Home Deserves Expert Care.
+          </h2>
+          <p class="homera-services-cta__text">
+            Tell us what needs attention. HOMERA makes finding dependable home-service professionals simple.
+          </p>
+          <div class="homera-services-cta__actions">
+            <a href="contact.html" class="homera-services-btn homera-services-btn--gold">
+              <span>Book Your Service</span>
+              <svg class="homera-services-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="pricing.html" class="homera-services-btn homera-services-btn--secondary" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
+              <span>View Transparent Pricing</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="component-mount" data-component="footer" data-src="navigation/Footer.html"></div>
+
+</body>
+</html>

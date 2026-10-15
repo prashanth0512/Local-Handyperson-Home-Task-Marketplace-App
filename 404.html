@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | HOMERA</title>
+  <meta name="description" content="The page you requested could not be found in the HOMERA home services registry.">
+  <meta name="theme-color" content="#F8FAFC">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+
+  <link rel="stylesheet" href="404.css">
+</head>
+<body class="error-page-body">
+
+  <div class="ambient-glow ambient-glow--1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--2" aria-hidden="true"></div>
+  <div class="ambient-grid-pattern" aria-hidden="true"></div>
+
+  <div class="error-shell">
+
+    <header class="error-top-bar" role="banner">
+      <a class="brand" href="index.html" aria-label="HOMERA — Return to Homepage">
+        <img class="brand__logo-img" src="assets/images/homera-logo.png" alt="HOMERA Logo" width="52" height="34">
+        <span class="brand__text">
+          <span class="brand__name">HOMERA<span class="brand__dot" aria-hidden="true"></span></span>
+          <span class="brand__tagline">Exceptional Care for Every Home</span>
+        </span>
+      </a>
+
+      <div class="top-controls">
+        <button class="icon-btn theme-toggle js-theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+        </button>
+
+        <button class="dir-toggle js-dir-toggle" id="rtlToggle" type="button" aria-label="LTR layout. Switch to right-to-left" title="Switch to right-to-left">
+          <svg class="dir-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4" />
+          </svg>
+          <span class="dir-toggle__label" data-dir-label>LTR</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="error-content" id="main-content" tabindex="-1">
+      <div class="error-badge">
+        <span class="error-badge__dot" aria-hidden="true"></span>
+        <span>Error 404 &bull; Living Space Not Found</span>
+      </div>
+
+      <div class="error-number-wrap" id="errorNumberWrap" aria-hidden="true">
+        <div class="error-number" id="moving404">
+          <span class="digit digit--left">4</span>
+          <span class="digit digit--center">
+            <span class="digit-compass">0</span>
+          </span>
+          <span class="digit digit--right">4</span>
+        </div>
+      </div>
+
+      <h1 class="error-title">We Couldn't Find That Living Space.</h1>
+
+      <p class="error-desc">
+        The craft directory, service blueprint, or resident link you requested appears to have moved, been renovated, or no longer exists in our registry. Our concierge desk is ready to guide you back home.
+      </p>
+
+      <div class="error-actions">
+        <a href="index.html" class="btn btn--primary">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Back to Home</span>
+        </a>
+        <a href="services.html" class="btn btn--secondary">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10" />
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+          </svg>
+          <span>Explore Services</span>
+        </a>
+      </div>
+    </main>
+
+    <footer class="error-micro-bar" aria-hidden="true">
+      <span class="error-micro-bar__brand">HOMERA Registry</span>
+      <span class="error-micro-bar__divider">&bull;</span>
+      <span class="error-micro-bar__status">All Systems Operational</span>
+    </footer>
+
+  </div>
+
+  <script src="404.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Dashboard — HOMERA Premium Home Services</title>
+  <meta name="description" content="Manage your HOMERA home task bookings, track assigned craftsmen, view service history, and review invoices in a dedicated, premium customer workspace.">
+  <meta name="theme-color" content="#F8FAFC">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+
+  <link rel="stylesheet" href="index.css?v=3">
+  <link rel="stylesheet" href="dashboard.css?v=3">
+
+  <script src="dashboard.js?v=3" defer></script>
+</head>
+<body class="homera-dashboard-body">
+
+  <div class="homera-dashboard-layout" id="dashboard-app">
+
+    <aside class="homera-dashboard-sidebar" id="dashboard-sidebar" aria-label="Customer Navigation">
+      <div class="homera-dashboard-sidebar__inner">
+
+        <div class="homera-dashboard-sidebar__brand">
+          <a href="index.html" class="homera-dashboard-sidebar__brand-link" aria-label="HOMERA — Exceptional Care for Every Home">
+            <img src="assets/images/homera-logo.png"
+                 alt="HOMERA Logo"
+                 width="58"
+                 height="38"
+                 class="homera-dashboard-sidebar__brand-logo">
+            <div class="homera-dashboard-sidebar__brand-text">
+              <span class="homera-dashboard-sidebar__brand-name">HOMERA<span class="homera-dashboard-sidebar__brand-dot" aria-hidden="true"></span></span>
+              <span class="homera-dashboard-sidebar__brand-tag">Exceptional Care for Every Home</span>
+            </div>
+          </a>
+          <button class="homera-dashboard-sidebar__close-btn" id="sidebar-close-btn" type="button" aria-label="Close sidebar">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="homera-dashboard-sidebar__divider" aria-hidden="true"></div>
+
+        <nav class="homera-dashboard-nav" aria-label="Dashboard Sections">
+          <ul class="homera-dashboard-nav__list" role="list">
+
+            <li class="homera-dashboard-nav__item">
+              <button class="homera-dashboard-nav__link is-active"
+                      type="button"
+                      data-view-target="overview"
+                      id="nav-overview"
+                      aria-current="page">
+                <span class="homera-dashboard-nav__icon-wrap" aria-hidden="true">
+                  <svg class="homera-dashboard-nav__icon" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                    <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                  </svg>
+                </span>
+                <span class="homera-dashboard-nav__label">Overview</span>
+                <span class="homera-dashboard-nav__active-bar" aria-hidden="true"></span>
+              </button>
+            </li>
+
+            <li class="homera-dashboard-nav__item">
+              <button class="homera-dashboard-nav__link"
+                      type="button"
+                      data-view-target="bookings"
+                      id="nav-bookings">
+                <span class="homera-dashboard-nav__icon-wrap" aria-hidden="true">
+                  <svg class="homera-dashboard-nav__icon" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                </span>
+                <span class="homera-dashboard-nav__label">My Bookings</span>
+                <span class="homera-dashboard-nav__badge" id="sidebar-bookings-count">2</span>
+                <span class="homera-dashboard-nav__active-bar" aria-hidden="true"></span>
+              </button>
+            </li>
+
+            <li class="homera-dashboard-nav__item">
+              <button class="homera-dashboard-nav__link"
+                      type="button"
+                      data-view-target="tracking"
+                      id="nav-tracking">
+                <span class="homera-dashboard-nav__icon-wrap" aria-hidden="true">
+                  <svg class="homera-dashboard-nav__icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                  </svg>
+                </span>
+                <span class="homera-dashboard-nav__label">Track Technician</span>
+                <span class="homera-dashboard-nav__active-pulse" aria-label="1 Active tracking session"></span>
+                <span class="homera-dashboard-nav__active-bar" aria-hidden="true"></span>
+              </button>
+            </li>
+
+            <li class="homera-dashboard-nav__item">
+              <button class="homera-dashboard-nav__link"
+                      type="button"
+                      data-view-target="history"
+                      id="nav-history">
+                <span class="homera-dashboard-nav__icon-wrap" aria-hidden="true">
+                  <svg class="homera-dashboard-nav__icon" viewBox="0 0 24 24">
+                    <path d="M12 8v4l3 3" />
+                    <path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" />
+                  </svg>
+                </span>
+                <span class="homera-dashboard-nav__label">Service History</span>
+                <span class="homera-dashboard-nav__active-bar" aria-hidden="true"></span>
+              </button>
+            </li>
+
+            <li class="homera-dashboard-nav__item">
+              <button class="homera-dashboard-nav__link"
+                      type="button"
+                      data-view-target="invoices"
+                      id="nav-invoices">
+                <span class="homera-dashboard-nav__icon-wrap" aria-hidden="true">
+                  <svg class="homera-dashboard-nav__icon" viewBox="0 0 24 24">
+                    <rect x="2" y="5" width="20" height="14" rx="2" />
+                    <line x1="2" y1="10" x2="22" y2="10" />
+                  </svg>
+                </span>
+                <span class="homera-dashboard-nav__label">Invoices &amp; Payments</span>
+                <span class="homera-dashboard-nav__active-bar" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="homera-dashboard-sidebar__footer">
+          <div class="homera-dashboard-sidebar__support-card">
+            <div class="homera-dashboard-sidebar__support-header">
+              <svg class="homera-dashboard-sidebar__support-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span class="homera-dashboard-sidebar__support-title">Guild Concierge</span>
+            </div>
+            <p class="homera-dashboard-sidebar__support-text">
+              Direct assistance with booking changes or custom quotes.
+            </p>
+            <a href="contact.html" class="homera-dashboard-sidebar__support-link">
+              <span>Contact Concierge</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
+          </div>
+
+          <nav class="homera-dashboard-sidebar__site-nav" aria-label="Explore Website Pages">
+            <span class="homera-dashboard-sidebar__site-label">HOMERA Showcase</span>
+            <div class="homera-dashboard-sidebar__site-pills">
+              <a href="index.html" class="homera-dashboard-sidebar__site-pill">Home 1</a>
+              <a href="home2.html" class="homera-dashboard-sidebar__site-pill">Home 2</a>
+              <a href="about.html" class="homera-dashboard-sidebar__site-pill">About</a>
+              <a href="services.html" class="homera-dashboard-sidebar__site-pill">Services</a>
+              <a href="services details.html" class="homera-dashboard-sidebar__site-pill">Details</a>
+              <a href="pricing.html" class="homera-dashboard-sidebar__site-pill">Pricing</a>
+              <a href="how-it-works.html" class="homera-dashboard-sidebar__site-pill">Process</a>
+              <a href="contact.html" class="homera-dashboard-sidebar__site-pill">Contact</a>
+            </div>
+          </nav>
+        </div>
+
+      </div>
+    </aside>
+
+    <div class="homera-dashboard-backdrop" id="dashboard-backdrop" aria-hidden="true"></div>
+
+    <div class="homera-dashboard-workspace">
+
+      <header class="homera-dashboard-header" role="banner">
+        <div class="homera-dashboard-header__inner">
+
+          <div class="homera-dashboard-header__welcome-wrap">
+            <button class="homera-dashboard-header__menu-btn"
+                    id="sidebar-toggle-btn"
+                    type="button"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="dashboard-sidebar">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+
+            <div class="homera-dashboard-header__welcome">
+              <h1 class="homera-dashboard-header__title" id="dashboard-welcome-heading">
+                Welcome back, Alex!
+              </h1>
+              <p class="homera-dashboard-header__sub" id="dashboard-welcome-sub">
+                Here's what's happening with your home services today.
+              </p>
+            </div>
+          </div>
+
+          <div class="homera-dashboard-header__controls">
+
+            <button class="homera-dashboard-icon-btn"
+                    id="theme-toggle-btn"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                    title="Switch to dark mode">
+              <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+              <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+              </svg>
+            </button>
+
+            <button class="homera-dashboard-pill-btn"
+                    id="dir-toggle-btn"
+                    type="button"
+                    aria-label="LTR layout. Switch to right-to-left direction"
+                    title="Switch layout direction">
+              <svg class="dir-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4" />
+              </svg>
+              <span class="dir-label" id="dir-toggle-label">LTR</span>
+            </button>
+
+            <div class="homera-dashboard-dropdown-wrap">
+              <button class="homera-dashboard-icon-btn"
+                      id="notifications-btn"
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-expanded="false"
+                      aria-label="View notifications">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+                <span class="notification-indicator" id="notification-indicator" aria-label="3 unread notifications">3</span>
+              </button>
+
+              <div class="homera-dashboard-panel" id="notifications-panel" role="region" aria-label="Notifications Panel" hidden style="display: none;">
+                <div class="homera-dashboard-panel__header">
+                  <div class="homera-dashboard-panel__title-wrap">
+                    <span class="homera-dashboard-panel__title">Notifications</span>
+                    <span class="homera-dashboard-panel__counter" id="notification-counter-badge">3 New</span>
+                  </div>
+                  <button class="homera-dashboard-text-btn" id="mark-all-read-btn" type="button">
+                    Mark all read
+                  </button>
+                </div>
+                <div class="homera-dashboard-panel__body" id="notification-list" role="list">
+
+                  <div class="notification-item is-unread" role="listitem" data-id="1">
+                    <div class="notification-item__icon-wrap notification-item__icon-wrap--confirm" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="m9 12 2 2 4-4" /><circle cx="12" cy="12" r="10" /></svg>
+                    </div>
+                    <div class="notification-item__content">
+                      <p class="notification-item__msg">Your <strong>Wall Mounting</strong> appointment has been confirmed for tomorrow at 10:00 AM.</p>
+                      <span class="notification-item__time">25 mins ago</span>
+                    </div>
+                    <button class="notification-item__status-dot" type="button" aria-label="Mark as read"></button>
+                  </div>
+
+                  <div class="notification-item is-unread" role="listitem" data-id="2">
+                    <div class="notification-item__icon-wrap notification-item__icon-wrap--tech" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                    </div>
+                    <div class="notification-item__content">
+                      <p class="notification-item__msg">Technician <strong>Marcus Sterling</strong> has been assigned to booking #HMR-8492.</p>
+                      <span class="notification-item__time">2 hours ago</span>
+                    </div>
+                    <button class="notification-item__status-dot" type="button" aria-label="Mark as read"></button>
+                  </div>
+
+                  <div class="notification-item is-unread" role="listitem" data-id="3">
+                    <div class="notification-item__icon-wrap notification-item__icon-wrap--inv" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>
+                    </div>
+                    <div class="notification-item__content">
+                      <p class="notification-item__msg">Invoice #INV-2026-089 (£85.00) is ready to review and download.</p>
+                      <span class="notification-item__time">1 day ago</span>
+                    </div>
+                    <button class="notification-item__status-dot" type="button" aria-label="Mark as read"></button>
+                  </div>
+                </div>
+                <div class="homera-dashboard-panel__footer">
+                  <span class="notification-panel-disclaimer">Demonstration notifications &bull; Syncs with active bookings</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="homera-dashboard-dropdown-wrap">
+              <button class="homera-dashboard-profile-btn"
+                      id="profile-menu-btn"
+                      type="button"
+                      aria-haspopup="menu"
+                      aria-expanded="false"
+                      aria-label="User account menu for Alex Morgan">
+                <span class="homera-dashboard-profile-btn__avatar" aria-hidden="true">AM</span>
+                <span class="homera-dashboard-profile-btn__info">
+                  <span class="homera-dashboard-profile-btn__name">Alex Morgan</span>
+                  <span class="homera-dashboard-profile-btn__badge">Gold Resident</span>
+                </span>
+                <svg class="homera-dashboard-profile-btn__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+
+              <div class="homera-dashboard-menu" id="profile-menu" role="menu" hidden style="display: none;">
+                <div class="homera-dashboard-menu__header">
+                  <p class="homera-dashboard-menu__user-name">Alex Morgan</p>
+                  <p class="homera-dashboard-menu__user-email">alex.morgan@example.com</p>
+                </div>
+                <div class="homera-dashboard-menu__divider" role="separator"></div>
+                <ul class="homera-dashboard-menu__list" role="presentation">
+                  <li role="none">
+                    <button class="homera-dashboard-menu__item" type="button" role="menuitem" id="menu-item-profile">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
+                      <span>Profile &amp; Settings</span>
+                    </button>
+                  </li>
+                  <li role="none">
+                    <a class="homera-dashboard-menu__item" href="index.html" role="menuitem">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+                      <span>Home 1 (Classic)</span>
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a class="homera-dashboard-menu__item" href="home2.html" role="menuitem">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>
+                      <span>Home 2 (Editorial)</span>
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a class="homera-dashboard-menu__item" href="about.html" role="menuitem">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></svg>
+                      <span>About Us</span>
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a class="homera-dashboard-menu__item" href="services.html" role="menuitem">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
+                      <span>All Services</span>
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a class="homera-dashboard-menu__item" href="services details.html" role="menuitem">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 3v18" /></svg>
+                      <span>Service Details</span>
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a class="homera-dashboard-menu__item" href="pricing.html" role="menuitem">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                      <span>Pricing &amp; Rates</span>
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a class="homera-dashboard-menu__item" href="how-it-works.html" role="menuitem">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                      <span>How It Works</span>
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a class="homera-dashboard-menu__item" href="contact.html" role="menuitem">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+                      <span>Contact &amp; Support</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="homera-dashboard-menu__divider" role="separator"></div>
+                <div class="homera-dashboard-menu__footer">
+                  <button class="homera-dashboard-menu__item homera-dashboard-menu__item--danger" type="button" role="menuitem" id="menu-item-logout">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></svg>
+                    <span>Log Out (Demo)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </header>
+
+      <main id="main-content" class="homera-dashboard-content" tabindex="-1">
+
+        <section class="homera-dashboard-view is-active" id="view-overview" aria-labelledby="overview-heading">
+          <h2 class="visually-hidden" id="overview-heading">Dashboard Overview</h2>
+
+          <div class="homera-dashboard-metrics-grid">
+
+            <article class="homera-dashboard-metric-card">
+              <div class="homera-dashboard-metric-card__header">
+                <span class="homera-dashboard-metric-card__icon-wrap homera-dashboard-metric-card__icon-wrap--indigo" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><rect x="8" y="2" width="8" height="4" rx="1" ry="1" /></svg>
+                </span>
+                <span class="homera-dashboard-metric-card__trend homera-dashboard-metric-card__trend--up">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>
+                  <span>+2 mo</span>
+                </span>
+              </div>
+              <div class="homera-dashboard-metric-card__value" id="metric-total-bookings">14</div>
+              <h3 class="homera-dashboard-metric-card__label">Total Bookings</h3>
+              <p class="homera-dashboard-metric-card__sub">All-time residential appointments</p>
+            </article>
+
+            <article class="homera-dashboard-metric-card">
+              <div class="homera-dashboard-metric-card__header">
+                <span class="homera-dashboard-metric-card__icon-wrap homera-dashboard-metric-card__icon-wrap--gold" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+                </span>
+                <span class="homera-dashboard-metric-card__badge-pill">Next: Tomorrow</span>
+              </div>
+              <div class="homera-dashboard-metric-card__value" id="metric-upcoming-bookings">2</div>
+              <h3 class="homera-dashboard-metric-card__label">Upcoming Appointments</h3>
+              <p class="homera-dashboard-metric-card__sub">Confirmed craftsman visits</p>
+            </article>
+
+            <article class="homera-dashboard-metric-card">
+              <div class="homera-dashboard-metric-card__header">
+                <span class="homera-dashboard-metric-card__icon-wrap homera-dashboard-metric-card__icon-wrap--blue" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                </span>
+                <span class="homera-dashboard-metric-card__trend homera-dashboard-metric-card__trend--neutral">
+                  <span>100% rated</span>
+                </span>
+              </div>
+              <div class="homera-dashboard-metric-card__value" id="metric-completed-services">11</div>
+              <h3 class="homera-dashboard-metric-card__label">Completed Services</h3>
+              <p class="homera-dashboard-metric-card__sub">Verified with guild warranty</p>
+            </article>
+
+            <article class="homera-dashboard-metric-card">
+              <div class="homera-dashboard-metric-card__header">
+                <span class="homera-dashboard-metric-card__icon-wrap homera-dashboard-metric-card__icon-wrap--amber" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                </span>
+                <span class="homera-dashboard-metric-card__badge-pill homera-dashboard-metric-card__badge-pill--warning">£85.00 due</span>
+              </div>
+              <div class="homera-dashboard-metric-card__value" id="metric-pending-invoices">1</div>
+              <h3 class="homera-dashboard-metric-card__label">Pending Invoices</h3>
+              <p class="homera-dashboard-metric-card__sub">Awaiting confirmation review</p>
+            </article>
+          </div>
+
+          <div class="homera-dashboard-highlight-card">
+            <div class="homera-dashboard-highlight-card__badge">
+              <span class="homera-dashboard-pulse-dot" aria-hidden="true"></span>
+              <span>Next Scheduled Service &bull; Tomorrow 10:00 AM</span>
+            </div>
+            <div class="homera-dashboard-highlight-card__content">
+              <div class="homera-dashboard-highlight-card__info">
+                <h3 class="homera-dashboard-highlight-card__title">Wall Mounting — 65&Prime; OLED Gallery Display</h3>
+                <p class="homera-dashboard-highlight-card__meta">
+                  <span><strong>Booking:</strong> #HMR-8492</span>
+                  <span>&bull;</span>
+                  <span><strong>Technician:</strong> Marcus Sterling (★ 4.98)</span>
+                  <span>&bull;</span>
+                  <span><strong>Status:</strong> <span class="status-badge status-badge--confirmed">Confirmed</span></span>
+                </p>
+              </div>
+              <div class="homera-dashboard-highlight-card__actions">
+                <button class="homera-dashboard-btn homera-dashboard-btn--gold" type="button" data-view-target="tracking">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" /></svg>
+                  <span>Track Status</span>
+                </button>
+                <button class="homera-dashboard-btn homera-dashboard-btn--secondary" type="button" data-action="view-booking-details" data-booking-id="HMR-8492">
+                  <span>Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="homera-dashboard-charts-grid">
+
+            <article class="homera-dashboard-card homera-dashboard-card--chart">
+              <div class="homera-dashboard-card__header">
+                <div>
+                  <h3 class="homera-dashboard-card__title">Booking Activity</h3>
+                  <p class="homera-dashboard-card__sub">Monthly craftsman appointments over the past 10 months</p>
+                </div>
+                <div class="chart-legend">
+                  <span class="chart-legend__item">
+                    <span class="chart-legend__color chart-legend__color--indigo"></span>
+                    <span>Bookings</span>
+                  </span>
+                </div>
+              </div>
+              <div class="chart-container" id="line-chart-container" role="img" aria-label="Line chart showing monthly bookings from January to October">
+
+              </div>
+            </article>
+
+            <article class="homera-dashboard-card homera-dashboard-card--chart">
+              <div class="homera-dashboard-card__header">
+                <div>
+                  <h3 class="homera-dashboard-card__title">Tasks by Service Discipline</h3>
+                  <p class="homera-dashboard-card__sub">Distribution across HOMERA's signature disciplines</p>
+                </div>
+                <div class="chart-legend">
+                  <span class="chart-legend__item">
+                    <span class="chart-legend__color chart-legend__color--gold"></span>
+                    <span>Completed Tasks</span>
+                  </span>
+                </div>
+              </div>
+              <div class="chart-container" id="bar-chart-container" role="img" aria-label="Bar chart showing service distribution across six disciplines">
+
+              </div>
+            </article>
+
+          </div>
+
+          <div class="homera-dashboard-split-grid">
+
+            <article class="homera-dashboard-card homera-dashboard-card--donut">
+              <div class="homera-dashboard-card__header">
+                <div>
+                  <h3 class="homera-dashboard-card__title">Booking Status Distribution</h3>
+                  <p class="homera-dashboard-card__sub">Current lifecycle breakdown</p>
+                </div>
+              </div>
+              <div class="donut-chart-wrap" id="donut-chart-container" role="img" aria-label="Donut chart showing booking status: 11 completed, 2 confirmed, 1 pending">
+
+              </div>
+            </article>
+
+            <article class="homera-dashboard-card homera-dashboard-card--table">
+              <div class="homera-dashboard-card__header">
+                <div>
+                  <h3 class="homera-dashboard-card__title">Recent Bookings</h3>
+                  <p class="homera-dashboard-card__sub">Latest service visits and upcoming visits</p>
+                </div>
+                <button class="homera-dashboard-text-btn homera-dashboard-text-btn--arrow" type="button" data-view-target="bookings">
+                  <span>View all bookings</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+
+              <div class="homera-dashboard-table-responsive">
+                <table class="homera-dashboard-table" aria-label="Recent Bookings">
+                  <thead>
+                    <tr>
+                      <th scope="col">Booking ID</th>
+                      <th scope="col">Service</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Technician</th>
+                      <th scope="col">Status</th>
+                      <th scope="col" class="text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="overview-recent-bookings-tbody">
+
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="homera-dashboard-view" id="view-bookings" aria-labelledby="bookings-heading" hidden>
+          <div class="homera-dashboard-view__header">
+            <div>
+              <h2 class="homera-dashboard-view__title" id="bookings-heading">My Bookings</h2>
+              <p class="homera-dashboard-view__desc">Monitor active appointments, scheduled dates, and historical home task requests.</p>
+            </div>
+            <a href="services.html" class="homera-dashboard-btn homera-dashboard-btn--primary">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+              <span>Book New Service</span>
+            </a>
+          </div>
+
+          <div class="homera-dashboard-toolbar">
+            <div class="homera-dashboard-search">
+              <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <input type="text"
+                     class="homera-dashboard-input"
+                     id="bookings-search-input"
+                     placeholder="Search by service, ID, or technician…"
+                     aria-label="Search bookings">
+            </div>
+
+            <div class="homera-dashboard-filters">
+              <div class="filter-group">
+                <label for="bookings-status-filter" class="visually-hidden">Filter by status</label>
+                <select class="homera-dashboard-select" id="bookings-status-filter">
+                  <option value="all">All Statuses</option>
+                  <option value="Confirmed">Confirmed</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Completed">Completed</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="bookings-service-filter" class="visually-hidden">Filter by service discipline</label>
+                <select class="homera-dashboard-select" id="bookings-service-filter">
+                  <option value="all">All Disciplines</option>
+                  <option value="Furniture Assembly">Furniture Assembly</option>
+                  <option value="Wall Mounting">Wall Mounting</option>
+                  <option value="Minor Home Repairs">Minor Home Repairs</option>
+                  <option value="Small Installations">Small Installations</option>
+                  <option value="Plumbing Fixes">Plumbing Fixes</option>
+                  <option value="Electrical Fixes">Electrical Fixes</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="homera-dashboard-card homera-dashboard-card--flush">
+            <div class="homera-dashboard-table-responsive">
+              <table class="homera-dashboard-table" aria-label="Customer Bookings">
+                <thead>
+                  <tr>
+                    <th scope="col">Service Name</th>
+                    <th scope="col">Booking ID</th>
+                    <th scope="col">Appointment Date</th>
+                    <th scope="col">Assigned Craftsman</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="bookings-tbody">
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="homera-dashboard-empty-state" id="bookings-empty-state" hidden>
+              <div class="homera-dashboard-empty-state__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+              </div>
+              <h3 class="homera-dashboard-empty-state__title">No matching bookings found</h3>
+              <p class="homera-dashboard-empty-state__text">Try adjusting your keyword search or active status filters.</p>
+              <button class="homera-dashboard-btn homera-dashboard-btn--secondary" type="button" id="bookings-reset-filters-btn">
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="homera-dashboard-view" id="view-tracking" aria-labelledby="tracking-heading" hidden>
+          <div class="homera-dashboard-view__header">
+            <div>
+              <h2 class="homera-dashboard-view__title" id="tracking-heading">Track Assigned Technician</h2>
+              <p class="homera-dashboard-view__desc">Real-time status updates and appointment milestones for your scheduled service.</p>
+            </div>
+            <div class="tracking-selector-wrap">
+              <label for="tracking-booking-select" class="tracking-selector-label">Active Job:</label>
+              <select class="homera-dashboard-select" id="tracking-booking-select" aria-label="Select active booking to track">
+                <option value="HMR-8492">#HMR-8492 — Wall Mounting (Tomorrow)</option>
+                <option value="HMR-8501">#HMR-8501 — Minor Plumbing Check (Pending)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="tracking-layout-grid" id="tracking-content-card">
+
+            <div class="homera-dashboard-card tracking-tech-card">
+              <div class="tracking-tech-card__badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                <span>HOMERA Guild Certified</span>
+              </div>
+
+              <div class="tracking-tech-card__avatar-wrap">
+                <div class="tracking-tech-card__avatar" id="tracking-tech-avatar">MS</div>
+                <div class="tracking-tech-card__status-indicator" title="Active on duty"></div>
+              </div>
+
+              <h3 class="tracking-tech-card__name" id="tracking-tech-name">Marcus Sterling</h3>
+              <p class="tracking-tech-card__discipline" id="tracking-tech-role">Senior Mounting &amp; Precision Craftsman</p>
+
+              <div class="tracking-tech-card__rating">
+                <span class="tracking-tech-card__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="tracking-tech-card__score" id="tracking-tech-rating">4.98 (142 reviews)</span>
+              </div>
+
+              <div class="tracking-tech-card__divider"></div>
+
+              <div class="tracking-tech-card__details">
+                <div class="tracking-tech-detail">
+                  <span class="tracking-tech-detail__label">Service</span>
+                  <span class="tracking-tech-detail__val" id="tracking-service-title">Wall Mounting</span>
+                </div>
+                <div class="tracking-tech-detail">
+                  <span class="tracking-tech-detail__label">Appointment</span>
+                  <span class="tracking-tech-detail__val" id="tracking-service-date">Oct 16, 2026 &bull; 10:00 AM – 12:00 PM</span>
+                </div>
+                <div class="tracking-tech-detail">
+                  <span class="tracking-tech-detail__label">Residence</span>
+                  <span class="tracking-tech-detail__val">42 Kensington Park Gardens, Apt 4B</span>
+                </div>
+                <div class="tracking-tech-detail">
+                  <span class="tracking-tech-detail__label">Background Check</span>
+                  <span class="tracking-tech-detail__val text-success">Verified &bull; Fully Insured</span>
+                </div>
+              </div>
+
+              <div class="tracking-tech-card__actions">
+                <a href="tel:+15550100199" class="homera-dashboard-btn homera-dashboard-btn--primary">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                  <span>Call Concierge</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="homera-dashboard-card tracking-timeline-card">
+              <div class="homera-dashboard-card__header">
+                <div>
+                  <h3 class="homera-dashboard-card__title">Job Progress Timeline</h3>
+                  <p class="homera-dashboard-card__sub">Current milestone and appointment verification workflow</p>
+                </div>
+                <span class="status-badge status-badge--confirmed" id="tracking-status-badge">Confirmed</span>
+              </div>
+
+              <ol class="tracking-timeline" id="tracking-timeline-list">
+
+                <li class="tracking-step is-complete">
+                  <div class="tracking-step__marker" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+                  </div>
+                  <div class="tracking-step__content">
+                    <div class="tracking-step__header">
+                      <h4 class="tracking-step__title">1. Booking Requested</h4>
+                      <span class="tracking-step__time">Oct 14, 2:30 PM</span>
+                    </div>
+                    <p class="tracking-step__desc">Task requirements, wall substrate, and hardware preferences registered.</p>
+                  </div>
+                </li>
+
+                <li class="tracking-step is-complete">
+                  <div class="tracking-step__marker" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+                  </div>
+                  <div class="tracking-step__content">
+                    <div class="tracking-step__header">
+                      <h4 class="tracking-step__title">2. Booking Confirmed</h4>
+                      <span class="tracking-step__time">Oct 14, 4:15 PM</span>
+                    </div>
+                    <p class="tracking-step__desc">Appointment slot reserved in HOMERA Guild master dispatch.</p>
+                  </div>
+                </li>
+
+                <li class="tracking-step is-current">
+                  <div class="tracking-step__marker" aria-hidden="true">
+                    <span class="tracking-step__pulse"></span>
+                  </div>
+                  <div class="tracking-step__content">
+                    <div class="tracking-step__header">
+                      <h4 class="tracking-step__title">3. Technician Assigned</h4>
+                      <span class="tracking-step__time">Oct 15, 9:00 AM</span>
+                    </div>
+                    <p class="tracking-step__desc">Specialist Marcus Sterling assigned with diamond-drill masonry tooling.</p>
+                  </div>
+                </li>
+
+                <li class="tracking-step is-pending">
+                  <div class="tracking-step__marker" aria-hidden="true">
+                    <span class="tracking-step__dot"></span>
+                  </div>
+                  <div class="tracking-step__content">
+                    <div class="tracking-step__header">
+                      <h4 class="tracking-step__title">4. Service In Progress</h4>
+                      <span class="tracking-step__time">Scheduled: Oct 16, 10:00 AM</span>
+                    </div>
+                    <p class="tracking-step__desc">On-site precision mounting, laser calibration, and load verification.</p>
+                  </div>
+                </li>
+
+                <li class="tracking-step is-pending">
+                  <div class="tracking-step__marker" aria-hidden="true">
+                    <span class="tracking-step__dot"></span>
+                  </div>
+                  <div class="tracking-step__content">
+                    <div class="tracking-step__header">
+                      <h4 class="tracking-step__title">5. Service Completed</h4>
+                      <span class="tracking-step__time">Awaiting Execution</span>
+                    </div>
+                    <p class="tracking-step__desc">Customer sign-off, workspace cleanup, and digital receipt delivery.</p>
+                  </div>
+                </li>
+              </ol>
+
+              <div class="tracking-location-notice">
+                <div class="tracking-location-notice__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></svg>
+                </div>
+                <div class="tracking-location-notice__text">
+                  <strong>Location Tracking Protocol:</strong> Live GPS navigation telematics activates approximately 30 minutes prior to your arrival window. When in transit, your technician's estimated arrival will update automatically.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="homera-dashboard-view" id="view-history" aria-labelledby="history-heading" hidden>
+          <div class="homera-dashboard-view__header">
+            <div>
+              <h2 class="homera-dashboard-view__title" id="history-heading">Service History</h2>
+              <p class="homera-dashboard-view__desc">Archived records of completed craftsman visits, hardware calibrations, and receipts.</p>
+            </div>
+            <div class="history-stat-badge">
+              <span class="history-stat-badge__num" id="history-count-badge">11</span>
+              <span class="history-stat-badge__label">Services Delivered</span>
+            </div>
+          </div>
+
+          <div class="homera-dashboard-toolbar">
+            <div class="homera-dashboard-search">
+              <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <input type="text"
+                     class="homera-dashboard-input"
+                     id="history-search-input"
+                     placeholder="Search past services by keyword, booking ID, or specialist…"
+                     aria-label="Search past services">
+            </div>
+
+            <div class="homera-dashboard-filters">
+              <label for="history-discipline-filter" class="visually-hidden">Filter by discipline</label>
+              <select class="homera-dashboard-select" id="history-discipline-filter">
+                <option value="all">All Disciplines</option>
+                <option value="Furniture Assembly">Furniture Assembly</option>
+                <option value="Wall Mounting">Wall Mounting</option>
+                <option value="Minor Home Repairs">Minor Home Repairs</option>
+                <option value="Small Installations">Small Installations</option>
+                <option value="Plumbing Fixes">Plumbing Fixes</option>
+                <option value="Electrical Fixes">Electrical Fixes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="homera-dashboard-card homera-dashboard-card--flush">
+            <div class="homera-dashboard-table-responsive">
+              <table class="homera-dashboard-table" aria-label="Completed Service History">
+                <thead>
+                  <tr>
+                    <th scope="col">Service Date</th>
+                    <th scope="col">Service Type</th>
+                    <th scope="col">Craftsman</th>
+                    <th scope="col">Booking Ref</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Quality Sign-Off</th>
+                    <th scope="col" class="text-end">Receipt</th>
+                  </tr>
+                </thead>
+                <tbody id="history-tbody">
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="homera-dashboard-empty-state" id="history-empty-state" hidden>
+              <div class="homera-dashboard-empty-state__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3" /><path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" /></svg>
+              </div>
+              <h3 class="homera-dashboard-empty-state__title">No history records match</h3>
+              <p class="homera-dashboard-empty-state__text">Check your search query or reset filters to display past records.</p>
+              <button class="homera-dashboard-btn homera-dashboard-btn--secondary" type="button" id="history-reset-btn">
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="homera-dashboard-view" id="view-invoices" aria-labelledby="invoices-heading" hidden>
+          <div class="homera-dashboard-view__header">
+            <div>
+              <h2 class="homera-dashboard-view__title" id="invoices-heading">Invoices &amp; Payments</h2>
+              <p class="homera-dashboard-view__desc">Review transparent billing records, paid invoices, and outstanding service balances.</p>
+            </div>
+            <div class="invoices-summary-pills">
+              <span class="invoices-pill invoices-pill--paid">Paid: £1,155.00</span>
+              <span class="invoices-pill invoices-pill--pending">Outstanding: £85.00</span>
+            </div>
+          </div>
+
+          <div class="homera-dashboard-metrics-grid homera-dashboard-metrics-grid--tri">
+            <article class="homera-dashboard-metric-card">
+              <span class="homera-dashboard-metric-card__label">Total Invoiced (All-Time)</span>
+              <div class="homera-dashboard-metric-card__value text-indigo">£1,240.00</div>
+              <p class="homera-dashboard-metric-card__sub">12 billing statements issued</p>
+            </article>
+
+            <article class="homera-dashboard-metric-card">
+              <span class="homera-dashboard-metric-card__label">Paid Invoices</span>
+              <div class="homera-dashboard-metric-card__value text-success">£1,155.00</div>
+              <p class="homera-dashboard-metric-card__sub">11 payments settled in full</p>
+            </article>
+
+            <article class="homera-dashboard-metric-card">
+              <span class="homera-dashboard-metric-card__label">Pending Payment</span>
+              <div class="homera-dashboard-metric-card__value text-amber">£85.00</div>
+              <p class="homera-dashboard-metric-card__sub">1 invoice awaiting review</p>
+            </article>
+          </div>
+
+          <div class="homera-dashboard-card homera-dashboard-card--flush">
+            <div class="homera-dashboard-card__header homera-dashboard-card__header--spaced">
+              <div>
+                <h3 class="homera-dashboard-card__title">Billing Statements</h3>
+                <p class="homera-dashboard-card__sub">Itemized service charges with downloadable PDF receipts</p>
+              </div>
+
+              <div class="invoices-filter-wrap">
+                <label for="invoices-status-filter" class="visually-hidden">Filter invoice status</label>
+                <select class="homera-dashboard-select homera-dashboard-select--sm" id="invoices-status-filter">
+                  <option value="all">All Invoices</option>
+                  <option value="Paid">Paid Only</option>
+                  <option value="Pending">Pending Only</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="homera-dashboard-table-responsive">
+              <table class="homera-dashboard-table" aria-label="Customer Invoices">
+                <thead>
+                  <tr>
+                    <th scope="col">Invoice #</th>
+                    <th scope="col">Service Reference</th>
+                    <th scope="col">Issue Date</th>
+                    <th scope="col">Due Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="invoices-tbody">
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="invoices-footer-notice">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></svg>
+              <span>Demonstration financial records &bull; Official payments processed securely via HOMERA Concierge</span>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+  </div>
+
+  <div class="homera-dashboard-modal" id="dashboard-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="homera-dashboard-modal__backdrop" id="modal-backdrop"></div>
+    <div class="homera-dashboard-modal__dialog">
+      <div class="homera-dashboard-modal__header">
+        <h3 class="homera-dashboard-modal__title" id="modal-title">Record Details</h3>
+        <button class="homera-dashboard-modal__close-btn" id="modal-close-btn" type="button" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" /></svg>
+        </button>
+      </div>
+      <div class="homera-dashboard-modal__body" id="modal-body">
+
+      </div>
+      <div class="homera-dashboard-modal__footer" id="modal-footer">
+        <button class="homera-dashboard-btn homera-dashboard-btn--secondary" type="button" id="modal-dismiss-btn">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="homera-dashboard-toast" id="dashboard-toast" role="status" aria-live="polite" hidden>
+    <span class="homera-dashboard-toast__msg" id="dashboard-toast-msg"></span>
+  </div>
+
+</body>
+</html>

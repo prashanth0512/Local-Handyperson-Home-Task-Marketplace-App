@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up - TaskLocal</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <script src="navigation/component-loader.js?v=3"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="navigation/Header.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <div class="background-animation">
+
+        <div class="floating-image image-one">
+            <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80"
+                alt="Home service">
+        </div>
+
+        <div class="floating-image image-two">
+            <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80"
+                alt="Handyperson service">
+        </div>
+
+        <div class="floating-image image-three">
+            <img
+                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=80"
+                alt="Cleaning service">
+        </div>
+
+        <div class="floating-image image-four">
+            <img
+                src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=700&q=80"
+                alt="Home repair">
+        </div>
+
+        <div class="floating-image image-five">
+            <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80"
+                alt="Electrical service">
+        </div>
+
+        <div class="service-orb orb-one"></div>
+        <div class="service-orb orb-two"></div>
+        <div class="service-orb orb-three"></div>
+
+    </div>
+
+    <div class="page-overlay"></div>
+
+    <div class="top-controls">
+        <button class="icon-btn theme-toggle js-theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg>
+        </button>
+
+        <button class="dir-toggle js-dir-toggle" id="rtlToggle" type="button" aria-label="LTR layout. Switch to right-to-left">
+            <svg class="dir-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4" />
+            </svg>
+            <span class="dir-toggle__label" data-dir-label>LTR</span>
+        </button>
+    </div>
+
+    <main class="signup-page">
+
+        <section class="signup-card">
+
+            <div class="signup-logo">
+
+                 <a class="brand" href="index.html" aria-label="HOMERA — Exceptional Care for Every Home">
+      <img class="brand__logo-img" src="assets/images/homera-logo.png" alt="HOMERA Logo" width="58" height="38" />
+      <span class="brand__text">
+        <span class="brand__name">HOMERA<span class="brand__dot" aria-hidden="true"></span></span>
+        <span class="brand__tagline">Exceptional Care for Every Home</span>
+      </span>
+    </a>
+
+            </div>
+
+            <div class="signup-header">
+
+                <h1>
+                    Create Your Account
+                </h1>
+
+                <p>
+                    Join your local community and make home tasks easier.
+                </p>
+
+            </div>
+
+            <div class="social-login">
+
+                <a
+                    href="https://accounts.google.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn">
+
+                    <i class="fa-brands fa-google google-icon"></i>
+
+                    <span>
+                         Google
+                    </span>
+
+                </a>
+
+                <a
+                    href="https://appleid.apple.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn">
+
+                    <i class="fa-brands fa-apple apple-icon"></i>
+
+                    <span>
+                      Apple
+                    </span>
+
+                </a>
+
+            </div>
+
+            <div class="divider">
+                <span>OR CREATE WITH EMAIL</span>
+            </div>
+
+            <form id="signupForm" novalidate>
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            data-lucide="user"
+                            class="input-icon">
+                        </i>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            data-lucide="mail"
+                            class="input-icon">
+                        </i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            data-lucide="lock"
+                            class="input-icon">
+                        </i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            required>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="password"
+                            aria-label="Show password">
+
+                            <i data-lucide="eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            data-lucide="shield-check"
+                            class="input-icon">
+                        </i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            required>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="confirmPassword"
+                            aria-label="Show password">
+
+                            <i data-lucide="eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <label class="terms-option">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required>
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="terms-text">
+                        I agree to the
+                        <a href="terms.html">
+                            Terms & Conditions
+                        </a>
+                        and
+                        <a href="privacy-policy.html">
+                            Privacy Policy
+                        </a>
+                    </span>
+
+                </label>
+
+                <button
+                    type="submit"
+                    class="signup-btn">
+
+                    <span>
+                        Create Account
+                    </span>
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </form>
+
+            <div class="login-text">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="login.html">
+                    Sign In
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+    const body = document.body;
+
+    const rtlToggle = document.getElementById("rtlToggle");
+    const themeToggle = document.getElementById("themeToggle");
+    const signupForm = document.getElementById("signupForm");
+
+    const KEYS = { theme: 'fixora-theme', dir: 'fixora-dir' };
+    const THEME_COLORS = { light: '#F8FAFC', dark: '#0B1120' };
+    const docEl = document.documentElement;
+
+    function getActiveTheme() {
+        return localStorage.getItem(KEYS.theme) || localStorage.getItem('homera-theme') || (docEl.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+    }
+
+    function applyTheme(theme) {
+        docEl.setAttribute('data-theme', theme);
+        body.classList.toggle('dark', theme === 'dark');
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', THEME_COLORS[theme]);
+
+        const label = `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`;
+        document.querySelectorAll('.js-theme-toggle').forEach(btn => {
+            btn.setAttribute('aria-label', label);
+            btn.setAttribute('title', label);
+        });
+        document.dispatchEvent(new CustomEvent('homera:themechange', { detail: { theme } }));
+        document.dispatchEvent(new CustomEvent('fixora:themechange', { detail: { theme } }));
+    }
+
+    function getActiveDir() {
+        return localStorage.getItem(KEYS.dir) || localStorage.getItem('homera-dir') || (docEl.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr');
+    }
+
+    function applyDir(dir) {
+        docEl.setAttribute('dir', dir);
+        const current = dir.toUpperCase();
+        const target = dir === 'rtl' ? 'left-to-right' : 'right-to-left';
+
+        document.querySelectorAll('.js-dir-toggle').forEach(btn => {
+            const label = btn.querySelector('[data-dir-label]');
+            if (label) label.textContent = current;
+            btn.setAttribute('aria-label', `${current} layout. Switch to ${target}`);
+            btn.setAttribute('title', `Switch to ${target} layout`);
+        });
+        document.dispatchEvent(new CustomEvent('homera:dirchange', { detail: { dir } }));
+        document.dispatchEvent(new CustomEvent('fixora:dirchange', { detail: { dir } }));
+    }
+
+    applyTheme(getActiveTheme());
+    applyDir(getActiveDir());
+
+    document.querySelectorAll('.js-theme-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const next = (docEl.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+            localStorage.setItem(KEYS.theme, next);
+            localStorage.setItem('homera-theme', next);
+            localStorage.setItem('tasklocal-theme', next);
+            applyTheme(next);
+        });
+    });
+
+    document.querySelectorAll('.js-dir-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const next = (docEl.getAttribute('dir') === 'rtl') ? 'ltr' : 'rtl';
+            localStorage.setItem(KEYS.dir, next);
+            localStorage.setItem('homera-dir', next);
+            localStorage.setItem('tasklocal-direction', next);
+            applyDir(next);
+        });
+    });
+
+    document.querySelectorAll(".password-toggle").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const targetId =
+                button.getAttribute("data-target");
+
+            const input =
+                document.getElementById(targetId);
+
+            if (!input) return;
+
+            const showing =
+                input.type === "text";
+
+            input.type =
+                showing ? "password" : "text";
+
+            button.setAttribute(
+                "aria-label",
+                showing
+                    ? "Show password"
+                    : "Hide password"
+            );
+
+            button.innerHTML =
+                showing
+                    ? '<i data-lucide="eye"></i>'
+                    : '<i data-lucide="eye-off"></i>';
+
+            lucide.createIcons();
+        });
+
+    });
+
+    signupForm.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        const fullName =
+            document.getElementById("fullName").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const password =
+            document.getElementById("password").value;
+
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+        const terms =
+            document.getElementById("terms").checked;
+
+        removeMessage();
+
+        if (!fullName) {
+
+            showMessage(
+                "Please enter your full name.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (!email) {
+
+            showMessage(
+                "Please enter your email address.",
+                "error"
+            );
+
+            return;
+        }
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+
+            showMessage(
+                "Please enter a valid email address.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (phone) {
+
+            const phonePattern =
+                /^[0-9+\-\s()]{7,18}$/;
+
+            if (!phonePattern.test(phone)) {
+
+                showMessage(
+                    "Please enter a valid phone number.",
+                    "error"
+                );
+
+                return;
+            }
+        }
+
+        if (password.length < 8) {
+
+            showMessage(
+                "Password must contain at least 8 characters.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (password !== confirmPassword) {
+
+            showMessage(
+                "Passwords do not match.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (!terms) {
+
+            showMessage(
+                "Please accept the Terms & Conditions and Privacy Policy.",
+                "error"
+            );
+
+            return;
+        }
+
+        showMessage(
+            "Your account has been created successfully.",
+            "success"
+        );
+
+        setTimeout(() => {
+
+            window.location.href =
+                "login.html";
+
+        }, 1200);
+
+    });
+
+    function showMessage(message, type) {
+
+        removeMessage();
+
+        const messageBox =
+            document.createElement("div");
+
+        messageBox.className =
+            `form-message ${type}`;
+
+        messageBox.textContent =
+            message;
+
+        signupForm.prepend(messageBox);
+
+    }
+
+    function removeMessage() {
+
+        const existing =
+            document.querySelector(".form-message");
+
+        if (existing) {
+            existing.remove();
+        }
+    }
+
+});
+</script>
+
+</body>
+
+</html>

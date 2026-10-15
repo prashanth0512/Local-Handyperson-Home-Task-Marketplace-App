@@ -1,0 +1,1855 @@
+
+.homera-pricing-main {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg, #F8FAFC);
+  color: var(--color-text, #0F172A);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+[data-theme="dark"] .homera-pricing-main {
+  background-color: #0B1120;
+  color: #F8FAFC;
+}
+
+.homera-pricing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #1E2A78;
+  background-color: #EEF2FF;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid rgba(30, 42, 120, 0.12);
+  margin-bottom: 18px;
+  width: fit-content;
+}
+
+[data-theme="dark"] .homera-pricing-eyebrow {
+  color: #D4AF37;
+  background-color: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.28);
+}
+
+.homera-pricing-eyebrow__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #D4AF37;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+.homera-pricing-section-title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-strong, #0F172A);
+  letter-spacing: normal;
+  margin: 0 0 20px 0;
+}
+
+.homera-pricing-section-title span {
+  color: var(--color-primary-ink, var(--brand-indigo, #1E2A78));
+}
+
+[data-theme="dark"] .homera-pricing-section-title {
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .homera-pricing-section-title span {
+  color: var(--color-accent, #D4AF37);
+}
+
+.homera-pricing-section-sub {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: clamp(15px, 1.2vw, 17px);
+  color: #64748B;
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+[data-theme="dark"] .homera-pricing-section-sub {
+  color: #CBD5E1;
+}
+
+.homera-pricing-hero__gold-line,
+.homera-pricing-cta__gold-line {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, #D4AF37, rgba(212, 175, 55, 0.2));
+  border-radius: 2px;
+  margin: 18px 0 20px 0;
+}
+
+[dir="rtl"] .homera-pricing-hero__gold-line,
+[dir="rtl"] .homera-pricing-cta__gold-line {
+  background: linear-gradient(-90deg, #D4AF37, rgba(212, 175, 55, 0.2));
+}
+
+.homera-pricing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: var(--radius-sm);
+  transition: all var(--dur-base, 200ms) var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1));
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.homera-pricing-btn__icon {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-fast, 150ms) ease;
+}
+
+.homera-pricing-btn:hover .homera-pricing-btn__icon {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .homera-pricing-btn:hover .homera-pricing-btn__icon {
+  transform: translateX(-4px) scaleX(-1);
+}
+
+[dir="rtl"] .homera-pricing-btn__icon {
+  transform: scaleX(-1);
+}
+
+.homera-pricing-btn--primary {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.homera-pricing-btn--primary:hover {
+  border-color: var(--brand-gold);
+  background: var(--brand-gold);
+  color: var(--brand-navy);
+}
+
+[data-theme="dark"] .homera-pricing-btn--primary {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+  border-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+}
+
+[data-theme="dark"] .homera-pricing-btn--primary:hover {
+  background-color: var(--brand-gold-hover, #E3C45D);
+  border-color: var(--brand-gold-hover, #E3C45D);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+}
+
+.homera-pricing-btn--secondary {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  background-color: transparent;
+}
+
+.homera-pricing-btn--secondary:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+[data-theme="dark"] .homera-pricing-btn--secondary {
+  color: #F8FAFC;
+  border-color: #273449;
+}
+
+[data-theme="dark"] .homera-pricing-btn--secondary:hover {
+  background-color: #1A2742;
+  border-color: #D4AF37;
+  color: #D4AF37;
+}
+
+.homera-pricing-btn--gold {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.homera-pricing-btn--gold:hover {
+  border-color: var(--brand-gold);
+  background: var(--brand-gold);
+  color: var(--brand-navy);
+}
+
+.homera-pricing-btn--outline-light {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.homera-pricing-btn--outline-light:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.homera-pricing-hero {
+  position: relative;
+  padding-block: clamp(56px, 7vw, 100px);
+  background: radial-gradient(circle at 10% 20%, rgba(238, 242, 255, 0.8) 0%, transparent 60%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+              #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+[data-theme="dark"] .homera-pricing-hero {
+  background: radial-gradient(circle at 10% 20%, rgba(30, 42, 120, 0.25) 0%, transparent 60%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+              #0B1120;
+  border-bottom-color: #273449;
+}
+
+.homera-pricing-hero__inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  align-items: center;
+  gap: clamp(36px, 5vw, 68px);
+}
+
+.homera-pricing-hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-pricing-hero .homera-pricing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: var(--brand-indigo, #1E2A78);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+[data-theme="dark"] .homera-pricing-hero .homera-pricing-eyebrow {
+  color: var(--brand-gold-hover, #E3C45D);
+  background: transparent;
+  border: none;
+}
+
+.pricing-hero-eyebrow-line {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--brand-gold, #D4AF37);
+}
+
+.homera-pricing-hero__title {
+  max-width: 760px;
+  margin: 0;
+  color: var(--color-text-strong, #0F172A);
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+[data-theme="dark"] .homera-pricing-hero__title {
+  color: var(--brand-white, #F8FAFC);
+}
+
+.homera-pricing-hero__title-accent {
+  display: block;
+  color: var(--color-primary-ink, var(--brand-indigo, #1E2A78));
+  font-style: normal;
+}
+
+[data-theme="dark"] .homera-pricing-hero__title-accent {
+  color: var(--brand-gold-hover, #E3C45D);
+}
+
+.homera-pricing-hero__desc {
+  max-width: 600px;
+  margin: 18px 0 30px 0;
+  color: var(--color-text-muted, #64748B);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+[data-theme="dark"] .homera-pricing-hero__desc {
+  color: rgba(248, 250, 252, 0.9);
+}
+
+.homera-pricing-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.homera-pricing-hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+[data-theme="dark"] .homera-pricing-hero__trust {
+  border-top-color: rgba(39, 52, 73, 0.8);
+}
+
+.homera-pricing-hero__trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748B;
+}
+
+[data-theme="dark"] .homera-pricing-hero__trust-item {
+  color: #CBD5E1;
+}
+
+.homera-pricing-hero__trust-icon {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: #D4AF37;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.homera-pricing-hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.homera-pricing-hero__frame {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  border-radius: var(--radius-xl, 20px);
+  overflow: hidden;
+  box-shadow: 0 24px 50px -15px rgba(15, 23, 42, 0.18),
+              0 0 0 1px rgba(226, 232, 240, 0.8);
+  background-color: #EEF2FF;
+}
+
+[data-theme="dark"] .homera-pricing-hero__frame {
+  box-shadow: 0 24px 55px -15px rgba(0, 0, 0, 0.65),
+              0 0 0 1px #273449;
+  background-color: #111C32;
+}
+
+.homera-pricing-hero__image {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.homera-pricing-hero__frame:hover .homera-pricing-hero__image {
+  transform: scale(1.025);
+}
+
+.homera-pricing-hero__badge {
+  position: absolute;
+  bottom: 22px;
+  inset-inline-start: 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 14px 28px -8px rgba(15, 23, 42, 0.18);
+  max-width: calc(100% - 44px);
+}
+
+[data-theme="dark"] .homera-pricing-hero__badge {
+  background: rgba(17, 28, 50, 0.92);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.6);
+}
+
+.homera-pricing-hero__badge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4AF37 0%, #B89223 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.35);
+}
+
+.homera-pricing-hero__badge-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #0F172A;
+}
+
+.homera-pricing-hero__badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-pricing-hero__badge-label {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.25;
+}
+
+[data-theme="dark"] .homera-pricing-hero__badge-label {
+  color: #F8FAFC;
+}
+
+.homera-pricing-hero__badge-sub {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748B;
+  letter-spacing: 0.02em;
+}
+
+[data-theme="dark"] .homera-pricing-hero__badge-sub {
+  color: #CBD5E1;
+}
+
+.homera-pricing-cards-section {
+  padding-block: clamp(64px, 8vw, 108px);
+  background-color: var(--color-bg, #F8FAFC);
+}
+
+[data-theme="dark"] .homera-pricing-cards-section {
+  background-color: #0B1120;
+}
+
+.homera-pricing-cards__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: clamp(40px, 5vw, 60px);
+}
+
+.homera-pricing-cards__header .homera-pricing-section-sub {
+  margin-inline: auto;
+}
+
+.homera-pricing-grid--three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.homera-pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-xl, 20px);
+  padding: 34px 30px;
+  transition: transform var(--dur-base, 200ms) var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1)),
+              box-shadow var(--dur-base, 200ms) var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1)),
+              border-color var(--dur-base, 200ms) ease;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="dark"] .homera-pricing-card {
+  background-color: #111C32;
+  border-color: #273449;
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.5);
+}
+
+.homera-pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px -12px rgba(30, 42, 120, 0.12),
+              0 2px 6px -2px rgba(15, 23, 42, 0.06);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+[data-theme="dark"] .homera-pricing-card:hover {
+  box-shadow: 0 22px 46px -12px rgba(0, 0, 0, 0.7),
+              0 0 0 1px rgba(212, 175, 55, 0.35);
+  border-color: #D4AF37;
+}
+
+.homera-pricing-card--popular {
+  border: 2px solid #D4AF37;
+  background: linear-gradient(180deg, rgba(238, 242, 255, 0.4) 0%, #FFFFFF 30%);
+  box-shadow: 0 14px 36px -10px rgba(212, 175, 55, 0.22),
+              0 4px 12px rgba(15, 23, 42, 0.05);
+  transform: scale(1.02);
+}
+
+[data-theme="dark"] .homera-pricing-card--popular {
+  border-color: #D4AF37;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, #111C32 28%);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.8),
+              0 0 0 1px rgba(212, 175, 55, 0.5);
+}
+
+.homera-pricing-card--popular:hover {
+  transform: scale(1.02) translateY(-6px);
+  box-shadow: 0 24px 50px -10px rgba(212, 175, 55, 0.35);
+}
+
+.homera-pricing-card__popular-badge {
+  position: absolute;
+  top: -15px;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #0F172A;
+  background: linear-gradient(135deg, #D4AF37 0%, #F5DE88 50%, #D4AF37 100%);
+  padding: 5px 16px;
+  border-radius: var(--radius-pill, 999px);
+  box-shadow: 0 6px 14px rgba(212, 175, 55, 0.45);
+  white-space: nowrap;
+}
+
+[dir="rtl"] .homera-pricing-card__popular-badge {
+  transform: translateX(50%);
+}
+
+.homera-pricing-card__popular-star {
+  font-size: 12px;
+  color: #0F172A;
+}
+
+.homera-pricing-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.homera-pricing-card__icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md, 12px);
+  background-color: #EEF2FF;
+  border: 1px solid rgba(30, 42, 120, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--dur-base, 200ms) ease;
+}
+
+[data-theme="dark"] .homera-pricing-card__icon-wrap {
+  background-color: #1A2742;
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.homera-pricing-card__icon-wrap--gold {
+  background-color: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+[data-theme="dark"] .homera-pricing-card__icon-wrap--gold {
+  background-color: rgba(212, 175, 55, 0.2);
+}
+
+.homera-pricing-card__icon {
+  width: 24px;
+  height: 24px;
+  stroke: #1E2A78;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke var(--dur-base, 200ms) ease;
+}
+
+.homera-pricing-card__icon-wrap--gold .homera-pricing-card__icon {
+  stroke: #D4AF37;
+}
+
+[data-theme="dark"] .homera-pricing-card__icon {
+  stroke: #D4AF37;
+}
+
+.homera-pricing-card__category {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #64748B;
+  background-color: #F1F5F9;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill, 999px);
+}
+
+[data-theme="dark"] .homera-pricing-card__category {
+  color: #CBD5E1;
+  background-color: #1A2742;
+}
+
+.homera-pricing-card__category--gold {
+  color: #997B1E;
+  background-color: rgba(212, 175, 55, 0.15);
+}
+
+[data-theme="dark"] .homera-pricing-card__category--gold {
+  color: #D4AF37;
+  background-color: rgba(212, 175, 55, 0.2);
+}
+
+.homera-pricing-card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.homera-pricing-card__title {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: clamp(22px, 1.5vw, 25px);
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+[data-theme="dark"] .homera-pricing-card__title {
+  color: #F8FAFC;
+}
+
+.homera-pricing-card__desc {
+  font-size: 14.5px;
+  color: #64748B;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  min-height: 72px;
+}
+
+[data-theme="dark"] .homera-pricing-card__desc {
+  color: #CBD5E1;
+}
+
+.homera-pricing-card__price-box {
+  background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 100%);
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg, 14px);
+  padding: 16px 18px;
+  margin-bottom: 24px;
+}
+
+[data-theme="dark"] .homera-pricing-card__price-box {
+  background: linear-gradient(135deg, #0F192D 0%, #162038 100%);
+  border-color: #273449;
+}
+
+.homera-pricing-card__price-box--popular {
+  background: linear-gradient(135deg, #EEF2FF 0%, rgba(212, 175, 55, 0.1) 100%);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+[data-theme="dark"] .homera-pricing-card__price-box--popular {
+  background: linear-gradient(135deg, #162038 0%, rgba(212, 175, 55, 0.12) 100%);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.homera-pricing-card__price-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.homera-pricing-card__price-status {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #1E2A78;
+}
+
+[data-theme="dark"] .homera-pricing-card__price-status {
+  color: #D4AF37;
+}
+
+.homera-pricing-card__price-status--gold {
+  color: #D4AF37;
+  font-weight: 800;
+}
+
+.homera-pricing-card__price-value-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.homera-pricing-card__price-display {
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: clamp(24px, 2.2vw, 30px);
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+[data-theme="dark"] .homera-pricing-card__price-display {
+  color: #F8FAFC;
+}
+
+.homera-pricing-card__price-caption {
+  display: block;
+  font-size: 12px;
+  color: #64748B;
+  margin-top: 4px;
+}
+
+[data-theme="dark"] .homera-pricing-card__price-caption {
+  color: #CBD5E1;
+}
+
+.homera-pricing-card__inclusions {
+  padding-top: 6px;
+  margin-bottom: 26px;
+}
+
+.homera-pricing-card__inclusions-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #0F172A;
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .homera-pricing-card__inclusions-title {
+  color: #CBD5E1;
+}
+
+.homera-pricing-card__feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.homera-pricing-card__feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #0F172A;
+}
+
+[data-theme="dark"] .homera-pricing-card__feature-item {
+  color: #F8FAFC;
+}
+
+.homera-pricing-card__check {
+  width: 17px;
+  height: 17px;
+  stroke: #D4AF37;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.homera-pricing-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #E2E8F0;
+}
+
+[data-theme="dark"] .homera-pricing-card__actions {
+  border-top-color: #273449;
+}
+
+.homera-pricing-card__btn-view,
+.homera-pricing-card__btn-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-radius: var(--radius-sm, 10px);
+  text-decoration: none;
+  transition: all var(--dur-base, 200ms) ease;
+  white-space: nowrap;
+}
+
+.homera-pricing-card__btn-view {
+  color: #1E2A78;
+  background-color: transparent;
+  border: 1px solid #CBD5E1;
+}
+
+.homera-pricing-card__btn-view:hover {
+  background-color: #EEF2FF;
+  border-color: #1E2A78;
+}
+
+[data-theme="dark"] .homera-pricing-card__btn-view {
+  color: #CBD5E1;
+  border-color: #273449;
+}
+
+[data-theme="dark"] .homera-pricing-card__btn-view:hover {
+  background-color: #1A2742;
+  border-color: #D4AF37;
+  color: #D4AF37;
+}
+
+.homera-pricing-card__arrow {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-fast, 150ms) ease;
+}
+
+.homera-pricing-card__btn-view:hover .homera-pricing-card__arrow {
+  transform: translateX(3px);
+}
+
+[dir="rtl"] .homera-pricing-card__btn-view:hover .homera-pricing-card__arrow {
+  transform: translateX(-3px) scaleX(-1);
+}
+
+[dir="rtl"] .homera-pricing-card__arrow {
+  transform: scaleX(-1);
+}
+
+.homera-pricing-card__btn-book {
+  background-color: #1E2A78;
+  color: #FFFFFF;
+  border: 1px solid #1E2A78;
+  font-weight: 700;
+}
+
+.homera-pricing-card__btn-book:hover {
+  border-color: var(--brand-gold);
+  background: var(--brand-gold);
+  color: var(--brand-navy);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+.homera-pricing-card__btn-book--gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #C39D2C 100%);
+  color: #0F172A;
+  border-color: #D4AF37;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+}
+
+.homera-pricing-card__btn-book--gold:hover {
+  background: linear-gradient(135deg, #E3C45D 0%, #D4AF37 100%);
+  border-color: #E3C45D;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45);
+}
+
+[data-theme="dark"] .homera-pricing-card__btn-book {
+  background-color: #D4AF37;
+  color: #0F172A;
+  border-color: #D4AF37;
+}
+
+[data-theme="dark"] .homera-pricing-card__btn-book:hover {
+  background-color: #E3C45D;
+  border-color: #E3C45D;
+}
+
+.homera-pricing-comparison-section {
+  padding-block: clamp(68px, 8vw, 112px);
+  background: linear-gradient(180deg, #EEF2FF 0%, rgba(238, 242, 255, 0.5) 100%);
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+[data-theme="dark"] .homera-pricing-comparison-section {
+  background: linear-gradient(180deg, #0F192D 0%, #111C32 100%);
+  border-top-color: #273449;
+  border-bottom-color: #273449;
+}
+
+.homera-pricing-comparison__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.homera-pricing-comparison__header .homera-pricing-section-sub {
+  margin-inline: auto;
+}
+
+.homera-pricing-comparison__grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  align-items: stretch;
+  gap: 32px;
+}
+
+.homera-pricing-summary-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-xl, 20px);
+  padding: 32px 28px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card {
+  background-color: #111C32;
+  border-color: #273449;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.homera-pricing-summary-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #1E2A78;
+  background-color: #EEF2FF;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill, 999px);
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__badge {
+  color: #D4AF37;
+  background-color: rgba(212, 175, 55, 0.14);
+}
+
+.homera-pricing-summary-card__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #D4AF37;
+}
+
+.homera-pricing-summary-card__title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #0F172A;
+  margin: 0 0 10px 0;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__title {
+  color: #F8FAFC;
+}
+
+.homera-pricing-summary-card__desc {
+  font-size: 13.5px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__desc {
+  color: #CBD5E1;
+}
+
+.homera-pricing-summary-card__highlight-box {
+  background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 100%);
+  border: 1px solid #E2E8F0;
+  border-inline-start: 4px solid #D4AF37;
+  border-radius: var(--radius-md, 12px);
+  padding: 14px 16px;
+  margin-bottom: 22px;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__highlight-box {
+  background: linear-gradient(135deg, #0F192D 0%, #1A2742 100%);
+  border-color: #273449;
+  border-inline-start-color: #D4AF37;
+}
+
+.homera-pricing-summary-card__highlight-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #D4AF37;
+  display: block;
+}
+
+.homera-pricing-summary-card__highlight-val {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 2px 0;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__highlight-val {
+  color: #F8FAFC;
+}
+
+.homera-pricing-summary-card__highlight-sub {
+  font-size: 12px;
+  color: #64748B;
+  display: block;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__highlight-sub {
+  color: #CBD5E1;
+}
+
+.homera-pricing-summary-card__points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.homera-pricing-summary-card__points li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__points li {
+  color: #F8FAFC;
+}
+
+.homera-pricing-summary-card__points svg {
+  width: 17px;
+  height: 17px;
+  stroke: #D4AF37;
+  stroke-width: 2;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.homera-pricing-summary-card__cta {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.homera-pricing-summary-card__cta .homera-pricing-btn {
+  width: 100%;
+}
+
+.homera-pricing-summary-card__concierge-note {
+  font-size: 11.5px;
+  color: #64748B;
+  text-align: center;
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__concierge-note {
+  color: #CBD5E1;
+}
+
+.homera-pricing-summary-card__concierge-note a {
+  color: #1E2A78;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .homera-pricing-summary-card__concierge-note a {
+  color: #D4AF37;
+}
+
+.homera-pricing-table-chart-wrap {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-xl, 20px);
+  overflow-x: auto;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  height: 100%;
+}
+
+[data-theme="dark"] .homera-pricing-table-chart-wrap {
+  background-color: #111C32;
+  border-color: #273449;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.homera-pricing-table-chart {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  text-align: start;
+}
+
+.homera-pricing-table-chart th,
+.homera-pricing-table-chart td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #E2E8F0;
+  vertical-align: middle;
+}
+
+[data-theme="dark"] .homera-pricing-table-chart th,
+[data-theme="dark"] .homera-pricing-table-chart td {
+  border-bottom-color: #273449;
+}
+
+.homera-pricing-table-chart thead th {
+  background-color: #F8FAFC;
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+[data-theme="dark"] .homera-pricing-table-chart thead th {
+  background-color: #0F192D;
+}
+
+.table-col-feature {
+  width: 32%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+[data-theme="dark"] .table-col-feature {
+  color: #F8FAFC;
+}
+
+.table-col-tier {
+  width: 22.6%;
+  text-align: center;
+}
+
+.table-tier-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+[data-theme="dark"] .table-tier-name {
+  color: #F8FAFC;
+}
+
+.table-tier-sub {
+  display: block;
+  font-size: 11.5px;
+  color: #64748B;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+[data-theme="dark"] .table-tier-sub {
+  color: #CBD5E1;
+}
+
+.homera-pricing-table-chart th.is-popular,
+.homera-pricing-table-chart td.is-popular {
+  background-color: rgba(238, 242, 255, 0.6);
+  border-inline: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+[data-theme="dark"] .homera-pricing-table-chart th.is-popular,
+[data-theme="dark"] .homera-pricing-table-chart td.is-popular {
+  background-color: rgba(26, 39, 66, 0.6);
+  border-inline-color: rgba(212, 175, 55, 0.35);
+}
+
+.table-popular-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #0F172A;
+  background-color: #D4AF37;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 4px;
+}
+
+.homera-pricing-table-chart tbody th {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0F172A;
+  text-align: start;
+}
+
+[data-theme="dark"] .homera-pricing-table-chart tbody th {
+  color: #F8FAFC;
+}
+
+.homera-pricing-table-chart tbody td {
+  text-align: center;
+  color: #64748B;
+}
+
+[data-theme="dark"] .homera-pricing-table-chart tbody td {
+  color: #CBD5E1;
+}
+
+.table-check {
+  font-size: 15px;
+  font-weight: 800;
+  color: #10B981;
+}
+
+.is-popular .table-check {
+  color: #D4AF37;
+}
+
+.homera-pricing-table-chart tfoot td {
+  padding: 20px;
+  text-align: center;
+  background-color: #F8FAFC;
+}
+
+[data-theme="dark"] .homera-pricing-table-chart tfoot td {
+  background-color: #0F192D;
+}
+
+.homera-pricing-table-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid #CBD5E1;
+  color: #1E2A78;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.homera-pricing-table-btn:hover {
+  background-color: #EEF2FF;
+  border-color: #1E2A78;
+}
+
+[data-theme="dark"] .homera-pricing-table-btn {
+  color: #F8FAFC;
+  border-color: #273449;
+}
+
+[data-theme="dark"] .homera-pricing-table-btn:hover {
+  background-color: #1A2742;
+  border-color: #D4AF37;
+  color: #D4AF37;
+}
+
+.homera-pricing-table-btn--gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #C39D2C 100%);
+  color: #0F172A;
+  border-color: #D4AF37;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
+}
+
+.homera-pricing-table-btn--gold:hover {
+  background: linear-gradient(135deg, #E3C45D 0%, #D4AF37 100%);
+}
+
+.homera-pricing-cta-section {
+  padding-block: clamp(68px, 8vw, 112px);
+  background-color: var(--color-bg, #F8FAFC);
+}
+
+[data-theme="dark"] .homera-pricing-cta-section {
+  background-color: #0B1120;
+}
+
+.homera-pricing-cta__card {
+  position: relative;
+  background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 45%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 45%),
+              #121A46;
+  border-radius: var(--radius-xl, 28px);
+  padding: clamp(36px, 4.8vw, 64px) clamp(24px, 4.5vw, 60px);
+  overflow: hidden;
+  box-shadow: 0 32px 70px -15px rgba(15, 23, 42, 0.45),
+              0 0 0 1px rgba(212, 175, 55, 0.3);
+  isolation: isolate;
+}
+
+.homera-pricing-cta__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.9) 50%, rgba(212, 175, 55, 0.1) 100%);
+  z-index: 5;
+}
+
+[data-theme="dark"] .homera-pricing-cta__card {
+  background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.18) 0%, transparent 45%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.13) 0%, transparent 45%),
+              #0B1120;
+  box-shadow: 0 32px 70px -15px rgba(0, 0, 0, 0.85),
+              0 0 0 1px #273449;
+}
+
+.homera-pricing-cta__layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(36px, 4.5vw, 64px);
+  width: 100%;
+}
+
+.homera-pricing-cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  z-index: 2;
+}
+
+.homera-pricing-cta__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #F8D675;
+  background-color: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill, 999px);
+  margin-bottom: 18px;
+}
+
+.homera-pricing-cta__badge-star {
+  font-size: 13px;
+  color: #D4AF37;
+}
+
+.homera-pricing-cta__title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.18;
+  color: #FFFFFF;
+  letter-spacing: normal;
+  margin: 0 0 18px 0;
+  text-align: start;
+}
+
+.homera-pricing-cta__title-accent {
+  color: #E3C45D;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.homera-pricing-cta__gold-line {
+  margin: 16px 0 20px 0;
+  background: linear-gradient(90deg, #D4AF37, rgba(212, 175, 55, 0.1));
+  width: 64px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+[dir="rtl"] .homera-pricing-cta__gold-line {
+  background: linear-gradient(-90deg, #D4AF37, rgba(212, 175, 55, 0.1));
+}
+
+.homera-pricing-cta__lead {
+  font-size: clamp(15px, 1.15vw, 17px);
+  color: #CBD5E1;
+  max-width: 540px;
+  line-height: 1.68;
+  margin: 0 0 22px 0;
+  text-align: start;
+}
+
+.homera-pricing-cta__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.homera-pricing-cta__trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #F1F5F9;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 200ms ease;
+}
+
+.homera-pricing-cta__trust-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.homera-pricing-cta__trust-icon {
+  width: 14px;
+  height: 14px;
+  stroke: #D4AF37;
+  stroke-width: 2.2;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.homera-pricing-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.homera-pricing-cta__disclaimer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: rgba(203, 213, 225, 0.75);
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-align: start;
+}
+
+.homera-pricing-cta__disclaimer-icon {
+  width: 13px;
+  height: 13px;
+  stroke: #D4AF37;
+  stroke-width: 2;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.homera-pricing-cta__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.homera-pricing-cta__image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4 / 3.3;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.6),
+              0 0 35px rgba(212, 175, 55, 0.15);
+  isolation: isolate;
+  background-color: #0F172A;
+}
+
+.homera-pricing-cta__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 600ms ease;
+}
+
+.homera-pricing-cta__card:hover .homera-pricing-cta__image {
+  transform: scale(1.05);
+  filter: brightness(1.03);
+}
+
+.homera-pricing-cta__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.25) 0%, transparent 40%, rgba(15, 23, 42, 0.75) 100%);
+  pointer-events: none;
+}
+
+.homera-pricing-cta__float-pill {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 999px;
+  padding: 6px 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+[dir="rtl"] .homera-pricing-cta__float-pill {
+  right: auto;
+  left: 14px;
+}
+
+.homera-pricing-cta__float-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.85);
+  flex-shrink: 0;
+}
+
+.homera-pricing-cta__float-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.homera-pricing-cta__float-text strong {
+  font-size: 11px;
+  font-weight: 700;
+  color: #F8FAFC;
+}
+
+.homera-pricing-cta__float-text span {
+  font-size: 9.5px;
+  color: #F8D675;
+  letter-spacing: 0.04em;
+}
+
+.homera-pricing-cta__float-card {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 14px;
+  padding: 10px 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+[dir="rtl"] .homera-pricing-cta__float-card {
+  left: auto;
+  right: 14px;
+}
+
+.homera-pricing-cta__float-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4AF37;
+  flex-shrink: 0;
+}
+
+.homera-pricing-cta__float-icon {
+  width: 16px;
+  height: 16px;
+  fill: #D4AF37;
+  stroke: #D4AF37;
+}
+
+.homera-pricing-cta__float-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.homera-pricing-cta__float-rating {
+  font-size: 13px;
+  font-weight: 800;
+  color: #F8FAFC;
+  letter-spacing: -0.01em;
+}
+
+.homera-pricing-cta__float-sub {
+  font-size: 10.5px;
+  color: #CBD5E1;
+}
+
+.homera-pricing-cta__ambient-glow {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.24) 0%, rgba(59, 130, 246, 0.16) 45%, transparent 70%);
+  filter: blur(45px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 1080px) {
+  .homera-pricing-comparison__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .homera-pricing-summary-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .homera-pricing-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .homera-pricing-hero__visual {
+    order: -1;
+  }
+
+  .homera-pricing-hero__image {
+    height: 380px;
+  }
+
+  .homera-pricing-grid--three {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin-inline: auto;
+    gap: 28px;
+  }
+
+  .homera-pricing-card--popular {
+    transform: none;
+  }
+
+  .homera-pricing-card--popular:hover {
+    transform: translateY(-6px);
+  }
+
+  .homera-pricing-cta__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .homera-pricing-cta__visual {
+    max-width: 520px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .homera-pricing-hero {
+    padding-block: 44px;
+  }
+
+  .homera-pricing-hero__title {
+    font-size: clamp(36px, 6vw, 46px);
+  }
+
+  .homera-pricing-hero__br {
+    display: none;
+  }
+
+  .homera-pricing-hero__image {
+    height: 280px;
+  }
+
+  .homera-pricing-hero__badge {
+    inset-inline-start: 12px;
+    bottom: 12px;
+    padding: 10px 14px;
+    max-width: calc(100% - 24px);
+  }
+
+  .homera-pricing-hero__badge-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .homera-pricing-hero__badge-label {
+    font-size: 12.5px;
+  }
+
+  .homera-pricing-hero__badge-sub {
+    font-size: 11px;
+  }
+
+  .homera-pricing-hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .homera-pricing-hero__actions .homera-pricing-btn {
+    width: 100%;
+  }
+
+  .homera-pricing-card {
+    padding: 26px 22px;
+  }
+
+  .homera-pricing-card__desc {
+    min-height: auto;
+  }
+
+  .homera-pricing-card__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .homera-pricing-card__btn-view,
+  .homera-pricing-card__btn-book {
+    width: 100%;
+  }
+
+  .homera-pricing-comparison-section {
+    padding-block: 54px;
+  }
+
+  .homera-pricing-table-chart-wrap {
+    margin-inline: -16px;
+    border-radius: 0;
+    border-inline: 0;
+  }
+
+  .homera-pricing-table-chart {
+    min-width: 540px;
+  }
+
+  .homera-pricing-cta-section {
+    padding-block: 54px;
+  }
+
+  .homera-pricing-cta__card {
+    padding: 34px 18px;
+    border-radius: 20px;
+  }
+
+  .homera-pricing-cta__title {
+    font-size: clamp(28px, 6vw, 34px);
+  }
+
+  .homera-pricing-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .homera-pricing-cta__actions .homera-pricing-btn {
+    width: 100%;
+  }
+
+  .homera-pricing-cta__trust-row {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .homera-pricing-cta__trust-pill {
+    font-size: 11.5px;
+    padding: 5px 10px;
+  }
+
+  .homera-pricing-cta__float-card {
+    padding: 8px 12px;
+    gap: 8px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .homera-pricing-cta__float-pill {
+    padding: 5px 10px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homera-pricing-card,
+  .homera-pricing-btn,
+  .homera-pricing-btn__icon,
+  .homera-pricing-card__arrow,
+  .homera-pricing-hero__image,
+  .homera-pricing-card__icon-wrap {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

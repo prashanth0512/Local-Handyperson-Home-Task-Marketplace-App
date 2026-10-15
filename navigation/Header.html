@@ -1,0 +1,94 @@
+<header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="HOMERA — Exceptional Care for Every Home">
+      <img class="brand__logo-img" src="assets/images/homera-logo.png" alt="HOMERA Logo" width="58" height="38" />
+      <span class="brand__text">
+        <span class="brand__name">HOMERA<span class="brand__dot" aria-hidden="true"></span></span>
+        <span class="brand__tagline">Exceptional Care for Every Home</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" id="site-nav-panel" aria-label="Primary">
+      <ul class="site-nav__list">
+        <li class="site-nav__item site-nav__item--has-dropdown">
+          <button class="site-nav__link site-nav__trigger" type="button"
+                  aria-expanded="false" aria-controls="site-nav-home-menu" data-dropdown-trigger>
+            <span>Home</span>
+            <svg class="site-nav__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <ul class="site-nav__dropdown" id="site-nav-home-menu" data-dropdown-menu>
+            <li>
+              <a class="site-nav__dropdown-link" href="index.html">
+                <span class="site-nav__dropdown-index" aria-hidden="true">01</span>
+                <span>Home 1</span>
+              </a>
+            </li>
+            <li>
+              <a class="site-nav__dropdown-link" href="home2.html">
+                <span class="site-nav__dropdown-index" aria-hidden="true">02</span>
+                <span>Home 2</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="site-nav__item"><a class="site-nav__link" href="about.html">About Us</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="services.html">Services</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="pricing.html">Pricing</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="how-it-works.html">How It Works</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="contact.html">Contact</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+      <div class="site-nav__panel-actions">
+        <button class="dir-toggle js-dir-toggle" type="button" aria-label="LTR layout. Switch to right-to-left">
+          <svg class="dir-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4" />
+          </svg>
+          <span class="dir-toggle__label" data-dir-label>LTR</span>
+        </button>
+        <a class="btn-login" href="login.html">
+          <span>Login</span>
+          <svg class="btn-login__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle js-theme-toggle" type="button" aria-label="Switch to dark mode">
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+      </button>
+
+      <button class="dir-toggle js-dir-toggle header-actions__dir" type="button" aria-label="LTR layout. Switch to right-to-left">
+        <svg class="dir-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4" />
+        </svg>
+
+      </button>
+
+      <a class="btn-login header-actions__login" href="login.html">
+        <span>Login</span>
+        <svg class="btn-login__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+
+      <button class="icon-btn menu-toggle" type="button"
+              aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu" data-menu-toggle>
+        <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+
+  </div>
+</header>

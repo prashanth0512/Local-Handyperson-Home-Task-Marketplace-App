@@ -1,0 +1,1118 @@
+
+.homera-detail-main {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg, #F8FAFC);
+  color: var(--color-text, #0F172A);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+.homera-detail-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--brand-indigo, #1E2A78);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid rgba(30, 42, 120, 0.12);
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+[data-theme="dark"] .homera-detail-eyebrow {
+  color: var(--brand-gold, #D4AF37);
+  background-color: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.homera-detail-eyebrow__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--brand-gold, #D4AF37);
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.homera-detail-section-title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-strong, #0F172A);
+  letter-spacing: normal;
+  margin: 0 0 20px 0;
+}
+
+.homera-detail-section-title span {
+  color: var(--color-primary-ink, var(--brand-indigo, #1E2A78));
+}
+
+[data-theme="dark"] .homera-detail-section-title {
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .homera-detail-section-title span {
+  color: var(--color-accent, #D4AF37);
+}
+
+.homera-detail-section-sub {
+  font-size: clamp(15px, 1.2vw, 17px);
+  color: var(--color-text-muted, #64748B);
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+.homera-detail-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: var(--radius-sm);
+  transition: all var(--dur-base, 200ms) var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1));
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.homera-detail-btn__icon {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-fast, 150ms) ease;
+}
+
+.homera-detail-btn:hover .homera-detail-btn__icon {
+  transform: translateX(4px);
+}
+
+html[dir="rtl"] .homera-detail-btn:hover .homera-detail-btn__icon {
+  transform: translateX(-4px);
+}
+
+.homera-detail-btn--primary {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.homera-detail-btn--primary:hover {
+  border-color: var(--brand-gold);
+  background: var(--brand-gold);
+  color: var(--brand-navy);
+}
+
+[data-theme="dark"] .homera-detail-btn--primary {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+  border-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+}
+
+[data-theme="dark"] .homera-detail-btn--primary:hover {
+  background-color: var(--brand-gold-hover, #E3C45D);
+  border-color: var(--brand-gold-hover, #E3C45D);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+}
+
+.homera-detail-btn--secondary {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  background-color: transparent;
+}
+
+.homera-detail-btn--secondary:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+[data-theme="dark"] .homera-detail-btn--secondary {
+  color: #F8FAFC;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .homera-detail-btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--brand-gold, #D4AF37);
+}
+
+.homera-detail-btn--gold {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.homera-detail-btn--gold:hover {
+  border-color: var(--brand-gold);
+  background: var(--brand-gold);
+  color: var(--brand-navy);
+}
+
+.homera-detail-btn--outline-light {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.homera-detail-btn--outline-light:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.homera-detail-hero {
+  position: relative;
+  padding-block: clamp(48px, 6vw, 92px) clamp(56px, 7vw, 100px);
+  background: radial-gradient(circle at 10% 20%, rgba(30, 42, 120, 0.05) 0%, transparent 60%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+              var(--color-bg, #F8FAFC);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .homera-detail-hero {
+  background: radial-gradient(circle at 10% 20%, rgba(30, 42, 120, 0.22) 0%, transparent 60%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+              #0B1120;
+  border-bottom-color: #273449;
+}
+
+.homera-detail-hero__inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  align-items: center;
+  gap: clamp(36px, 5vw, 68px);
+}
+
+.homera-detail-hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-detail-hero .homera-detail-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: var(--brand-indigo, #1E2A78);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+[data-theme="dark"] .homera-detail-hero .homera-detail-eyebrow {
+  color: var(--brand-gold-hover, #E3C45D);
+  background: transparent;
+  border: none;
+}
+
+.detail-hero-eyebrow-line {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--brand-gold, #D4AF37);
+}
+
+.homera-detail-hero__title {
+  max-width: 760px;
+  margin: 0 0 20px 0;
+  color: var(--color-text-strong, #0F172A);
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.homera-detail-hero__title span {
+  display: block;
+  color: var(--color-primary-ink, var(--brand-indigo, #1E2A78));
+}
+
+[data-theme="dark"] .homera-detail-hero__title {
+  color: var(--brand-white, #F8FAFC);
+}
+
+[data-theme="dark"] .homera-detail-hero__title span {
+  color: var(--brand-gold-hover, #E3C45D);
+}
+
+.homera-detail-hero__lead {
+  max-width: 600px;
+  margin: 0 0 24px 0;
+  color: var(--color-text-muted, #64748B);
+  font-family: var(--font-ui, "Manrope", sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+[data-theme="dark"] .homera-detail-hero__lead {
+  color: rgba(248, 250, 252, 0.9);
+}
+
+.homera-detail-hero__highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md, 12px);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  border: 1px solid rgba(30, 42, 120, 0.12);
+  margin-bottom: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-indigo, #1E2A78);
+  max-width: 560px;
+}
+
+[data-theme="dark"] .homera-detail-hero__highlight {
+  background-color: #162038;
+  border-color: rgba(212, 175, 55, 0.25);
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-detail-hero__highlight-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.homera-detail-hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.homera-detail-hero__visual {
+  position: relative;
+}
+
+.homera-detail-hero__media-frame {
+  position: relative;
+  border-radius: var(--radius-xl, 20px);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -15px rgba(15, 23, 42, 0.22),
+              0 0 0 1px rgba(212, 175, 55, 0.25);
+  background-color: var(--color-surface, #FFFFFF);
+  aspect-ratio: 16 / 12;
+}
+
+[data-theme="dark"] .homera-detail-hero__media-frame {
+  box-shadow: 0 26px 64px -15px rgba(0, 0, 0, 0.7),
+              0 0 0 1px rgba(212, 175, 55, 0.3);
+}
+
+.homera-detail-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms var(--ease-out, cubic-bezier(0.22, 0.61, 0.36, 1));
+}
+
+.homera-detail-hero__media-frame:hover .homera-detail-hero__image {
+  transform: scale(1.03);
+}
+
+.homera-detail-hero__badge {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  background-color: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+html[dir="rtl"] .homera-detail-hero__badge {
+  left: auto;
+  right: 22px;
+}
+
+.homera-detail-hero__badge-accent {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-detail-hero__badge-text {
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.homera-detail-benefits {
+  padding-block: clamp(64px, 8vw, 112px);
+  background-color: var(--color-surface, #FFFFFF);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-detail-benefits {
+  background-color: #0F192D;
+  border-bottom-color: #273449;
+}
+
+.homera-detail-benefits__inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: flex-start;
+  gap: clamp(40px, 6vw, 76px);
+}
+
+.homera-detail-benefits__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-detail-benefits__prose {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 15.5px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+[data-theme="dark"] .homera-detail-benefits__prose {
+  color: #CBD5E1;
+}
+
+.homera-detail-benefits__use-cases {
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-detail-benefits__use-cases {
+  border-top-color: #273449;
+}
+
+.homera-detail-benefits__subhead {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-theme="dark"] .homera-detail-benefits__subhead {
+  color: #F8FAFC;
+}
+
+.homera-detail-benefits__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.homera-detail-benefits__tags li {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--brand-indigo, #1E2A78);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm, 10px);
+  border: 1px solid rgba(30, 42, 120, 0.1);
+}
+
+[data-theme="dark"] .homera-detail-benefits__tags li {
+  color: #CBD5E1;
+  background-color: #1A2742;
+  border-color: #273449;
+}
+
+.homera-detail-benefits__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.homera-detail-benefits__media-card {
+  border-radius: var(--radius-lg, 14px);
+  overflow: hidden;
+  box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--color-border, #E2E8F0);
+  aspect-ratio: 16 / 10;
+}
+
+[data-theme="dark"] .homera-detail-benefits__media-card {
+  border-color: #273449;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.homera-detail-benefits__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homera-detail-benefits__card {
+  background-color: var(--color-bg, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 14px);
+  padding: 24px;
+}
+
+[data-theme="dark"] .homera-detail-benefits__card {
+  background-color: #111C32;
+  border-color: #273449;
+}
+
+.homera-detail-benefits__card-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+  margin-bottom: 16px;
+}
+
+[data-theme="dark"] .homera-detail-benefits__card-title {
+  color: #F8FAFC;
+}
+
+.homera-detail-benefits__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.homera-detail-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.5;
+}
+
+[data-theme="dark"] .homera-detail-benefit-item {
+  color: #CBD5E1;
+}
+
+.homera-detail-benefit-item__icon {
+  width: 18px;
+  height: 18px;
+  stroke: var(--brand-gold, #D4AF37);
+  stroke-width: 2.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.homera-detail-included {
+  padding-block: clamp(64px, 8vw, 112px);
+  background-color: var(--color-bg, #F8FAFC);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-detail-included {
+  background-color: #0B1120;
+  border-bottom-color: #273449;
+}
+
+.homera-detail-included__header {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: clamp(40px, 5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homera-detail-included__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.5vw, 30px);
+  margin-bottom: 40px;
+}
+
+.homera-detail-task-card {
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 14px);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--dur-fast, 150ms) ease,
+              border-color var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-detail-task-card {
+  background-color: #111C32;
+  border-color: #273449;
+}
+
+.homera-detail-task-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.homera-detail-task-card__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.homera-detail-task-card__check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  color: var(--brand-indigo, #1E2A78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .homera-detail-task-card__check {
+  background-color: #1A2742;
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-detail-task-card__check svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.homera-detail-task-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+}
+
+[data-theme="dark"] .homera-detail-task-card__title {
+  color: #F8FAFC;
+}
+
+.homera-detail-task-card__desc {
+  font-size: 13.5px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.55;
+}
+
+[data-theme="dark"] .homera-detail-task-card__desc {
+  color: #CBD5E1;
+}
+
+.homera-detail-scope-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: var(--radius-lg, 14px);
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  border: 1px solid rgba(30, 42, 120, 0.15);
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+[data-theme="dark"] .homera-detail-scope-note {
+  background-color: #111C32;
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.homera-detail-scope-note__icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--brand-indigo, #1E2A78);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .homera-detail-scope-note__icon-wrap {
+  background-color: var(--brand-gold, #D4AF37);
+  color: #0F172A;
+}
+
+.homera-detail-scope-note__icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.homera-detail-scope-note__title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--brand-indigo, #1E2A78);
+  margin-bottom: 4px;
+}
+
+[data-theme="dark"] .homera-detail-scope-note__title {
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-detail-scope-note__text {
+  font-size: 13.5px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.6;
+}
+
+[data-theme="dark"] .homera-detail-scope-note__text {
+  color: #CBD5E1;
+}
+
+.homera-detail-testimonials {
+  padding-block: clamp(64px, 8vw, 112px);
+  background-color: var(--color-surface, #FFFFFF);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-detail-testimonials {
+  background-color: #0F192D;
+  border-bottom-color: #273449;
+}
+
+.homera-detail-testimonials__header {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: clamp(40px, 5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homera-detail-testimonials__note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--color-text-muted, #64748B);
+  margin-top: 8px;
+  padding: 6px 14px;
+  background-color: var(--color-bg, #F8FAFC);
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-detail-testimonials__note {
+  background-color: #111C32;
+  border-color: #273449;
+  color: #CBD5E1;
+}
+
+.homera-detail-testimonials__note-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-gold, #D4AF37);
+}
+
+.homera-detail-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 3vw, 36px);
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.homera-detail-testimonial-card {
+  background-color: var(--color-bg, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-xl, 20px);
+  padding: clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-detail-testimonial-card {
+  background-color: #111C32;
+  border-color: #273449;
+}
+
+.homera-detail-testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.homera-detail-testimonial-card__stars {
+  display: flex;
+  gap: 4px;
+  color: var(--brand-gold, #D4AF37);
+  margin-bottom: 16px;
+}
+
+.homera-detail-testimonial-card__stars svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.homera-detail-testimonial-card__quote {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-text-strong, #0F172A);
+  font-style: italic;
+  margin-bottom: 22px;
+  flex: 1;
+}
+
+[data-theme="dark"] .homera-detail-testimonial-card__quote {
+  color: #F8FAFC;
+}
+
+.homera-detail-testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border, #E2E8F0);
+}
+
+[data-theme="dark"] .homera-detail-testimonial-card__author {
+  border-top-color: #273449;
+}
+
+.homera-detail-testimonial-card__avatar-fallback {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--brand-indigo-tint, #EEF2FF);
+  color: var(--brand-indigo, #1E2A78);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(30, 42, 120, 0.15);
+}
+
+[data-theme="dark"] .homera-detail-testimonial-card__avatar-fallback {
+  background-color: #1A2742;
+  color: var(--brand-gold, #D4AF37);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.homera-detail-testimonial-card__meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.homera-detail-testimonial-card__name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+}
+
+[data-theme="dark"] .homera-detail-testimonial-card__name {
+  color: #F8FAFC;
+}
+
+.homera-detail-testimonial-card__context {
+  font-size: 12.5px;
+  color: var(--color-text-muted, #64748B);
+}
+
+[data-theme="dark"] .homera-detail-testimonial-card__context {
+  color: #CBD5E1;
+}
+
+.homera-detail-cta {
+  position: relative;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  padding-block: clamp(72px, 9vw, 120px);
+  overflow: hidden;
+}
+
+.homera-detail-cta__backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/images/cta-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: saturate(0.8);
+}
+
+.homera-detail-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 42, 120, 0.94) 0%, rgba(15, 23, 42, 0.96) 100%);
+  z-index: 1;
+}
+
+.homera-detail-cta__container {
+  position: relative;
+  z-index: 2;
+}
+
+.homera-detail-cta__inner {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homera-detail-cta__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--brand-gold, #D4AF37);
+  background-color: rgba(212, 175, 55, 0.12);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  margin-bottom: 22px;
+}
+
+.homera-detail-cta__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+}
+
+.homera-detail-cta__title {
+  font-family: var(--font-display, "DM Serif Display", Georgia, serif);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.18;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+  letter-spacing: normal;
+}
+
+.homera-detail-cta__title span {
+  color: #E3C45D;
+}
+
+.homera-detail-cta__text {
+  font-size: clamp(16px, 1.3vw, 18.5px);
+  color: #CBD5E1;
+  line-height: 1.65;
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+
+.homera-detail-cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.homera-detail-fallback {
+  padding-block: clamp(80px, 10vw, 140px);
+  background-color: var(--color-bg, #F8FAFC);
+  text-align: center;
+}
+
+[data-theme="dark"] .homera-detail-fallback {
+  background-color: #0B1120;
+}
+
+.homera-detail-fallback__inner {
+  max-width: 840px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homera-detail-fallback__title {
+  font-family: "Cormorant Garamond", "DM Serif Display", Georgia, serif;
+  font-size: clamp(34px, 4.2vw, 48px);
+  font-weight: 600;
+  color: var(--color-text-strong, #0F172A);
+  margin-bottom: 16px;
+}
+
+[data-theme="dark"] .homera-detail-fallback__title {
+  color: #F8FAFC;
+}
+
+.homera-detail-fallback__text {
+  font-size: 16px;
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.65;
+  max-width: 580px;
+  margin-bottom: 40px;
+}
+
+.homera-detail-fallback__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.homera-detail-fallback-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-md, 12px);
+  text-decoration: none;
+  transition: all var(--dur-fast, 150ms) ease;
+}
+
+[data-theme="dark"] .homera-detail-fallback-card {
+  background-color: #111C32;
+  border-color: #273449;
+}
+
+.homera-detail-fallback-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-gold, #D4AF37);
+  box-shadow: 0 8px 24px -6px rgba(30, 42, 120, 0.12);
+}
+
+.homera-detail-fallback-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-strong, #0F172A);
+  margin-bottom: 4px;
+}
+
+[data-theme="dark"] .homera-detail-fallback-card__title {
+  color: #F8FAFC;
+}
+
+.homera-detail-fallback-card__sub {
+  font-size: 12.5px;
+  color: var(--color-text-muted, #64748B);
+}
+
+@media (max-width: 1024px) {
+  .homera-detail-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .homera-detail-hero__visual {
+    max-width: 620px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .homera-detail-benefits__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .homera-detail-benefits__visual {
+    max-width: 620px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .homera-detail-included__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .homera-detail-fallback__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .homera-detail-included__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homera-detail-testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homera-detail-fallback__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homera-detail-hero__actions,
+  .homera-detail-cta__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .homera-detail-btn {
+    width: 100%;
+  }
+
+  .homera-detail-scope-note {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
