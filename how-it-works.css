@@ -1102,6 +1102,8 @@
 }
 
 .how-process-card {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
     overflow: hidden;
     border: 1px solid var(--color-border);
@@ -1196,6 +1198,7 @@
 
 .how-process-card-content {
     display: flex;
+    flex: 1;
     flex-direction: column;
     padding: 27px 26px 24px;
 }

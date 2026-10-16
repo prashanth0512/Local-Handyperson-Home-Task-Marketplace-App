@@ -199,16 +199,16 @@
 }
 
 .homera-pricing-btn--outline-light {
-  border: 1px solid var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: var(--radius-sm);
-  color: var(--color-primary);
+  color: #FFFFFF;
   background: transparent;
 }
 
 .homera-pricing-btn--outline-light:hover {
-  border-color: var(--color-primary);
-  background: var(--color-primary);
-  color: var(--color-primary-text);
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
 }
 
 .homera-pricing-hero {
